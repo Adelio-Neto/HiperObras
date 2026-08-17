@@ -72,12 +72,23 @@
   /**
    * Preloader
    */
-  const preloader = document.querySelector("#preloader");
-  if (preloader) {
-    window.addEventListener("load", () => {
-      preloader.remove();
-    });
-  }
+  window.addEventListener("load", () => {
+    const preloader = document.querySelector("#preloader");
+
+    if (!preloader) {
+      return;
+    }
+
+    preloader.classList.add("preloader-hidden");
+
+    preloader.addEventListener(
+      "transitionend",
+      () => {
+        preloader.remove();
+      },
+      { once: true },
+    );
+  });
 
   /**
    * Scroll top button
