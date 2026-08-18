@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let currentSlide = 0;
   let autoplay = null;
 
-  const slideDuration = 6000;
+  const slideDuration = 9000;
 
   /*
   | Criar indicadores
