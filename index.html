@@ -106,10 +106,7 @@
           <div class="container position-relative h-100">
             <div class="row h-100 align-items-center justify-content-center">
               <div class="col-lg-8 text-center">
-                <h1>
-                  Construindo o Futuro
-                  <span class="accent">Hoje</span>
-                </h1>
+                <h1>Construindo o Futuro Hoje</h1>
 
                 <p class="lead">
                   A HiperObras entrega soluções completas em construção civil,
@@ -119,10 +116,18 @@
                 <div
                   class="hero-actions d-flex flex-wrap justify-content-center gap-3"
                 >
-                  <a href="#projects" class="btn-main"> Nossos Projetos </a>
+                  <a
+                    href="#"
+                    class="video-link btn-main"
+                    data-bs-toggle="modal"
+                    data-bs-target="#videoModal"
+                  >
+                    <i class="bi bi-play-circle-fill"></i>
+                    <span>Ver Vídeos</span>
+                  </a>
 
                   <a href="#contact" class="btn-outline">
-                    Solicitar Orçamento
+                    Ver Projetos
                     <i class="bi bi-arrow-right"></i>
                   </a>
                 </div>
@@ -144,8 +149,8 @@
             <div class="row h-100 align-items-center justify-content-center">
               <div class="col-lg-8 text-center">
                 <h1>
-                  Grandes Projetos.
-                  <span class="accent">Grandes Resultados.</span>
+                  Grandes Projetos <br />
+                  Grandes Resultados
                 </h1>
 
                 <p class="lead">
@@ -156,10 +161,18 @@
                 <div
                   class="hero-actions d-flex flex-wrap justify-content-center gap-3"
                 >
-                  <a href="#projects" class="btn-main"> Ver Projetos </a>
+                  <a
+                    href="#"
+                    class="video-link btn-main"
+                    data-bs-toggle="modal"
+                    data-bs-target="#videoModal"
+                  >
+                    <i class="bi bi-play-circle-fill"></i>
+                    <span>Ver Vídeos</span>
+                  </a>
 
                   <a href="#contact" class="btn-outline">
-                    Pedir Orçamento
+                    Ver Projetos
                     <i class="bi bi-arrow-right"></i>
                   </a>
                 </div>
@@ -1640,6 +1653,40 @@
         <div class="preload-tetromino preload-box2"></div>
         <div class="preload-tetromino preload-box3"></div>
         <div class="preload-tetromino preload-box4"></div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="videoModal"
+      tabindex="-1"
+      aria-labelledby="videoModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content bg-dark border-0">
+          <div class="modal-header border-0">
+            <h5 class="modal-title text-white" id="videoModalLabel">
+              HiperObras
+            </h5>
+
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Fechar"
+            ></button>
+          </div>
+
+          <div class="modal-body p-0">
+            <div class="ratio ratio-16x9">
+              <video id="heroVideo" controls>
+                <source src="assets/videos/hiperobras.mp4" type="video/mp4" />
+                O seu navegador não suporta vídeos.
+              </video>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
