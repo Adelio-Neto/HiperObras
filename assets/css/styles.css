@@ -940,18 +940,17 @@ section,
     scroll-margin-top: 66px;
   }
 }
-
 /*--------------------------------------------------------------
 # Global Section Titles
 --------------------------------------------------------------*/
 .section-title {
-  text-align: center;
+  text-align: left;
   padding-bottom: 60px;
   position: relative;
 }
 
 .section-title h2 {
-  font-size: 32px;
+  font-size: 20px;
   font-weight: 700;
   margin-bottom: 20px;
   padding-bottom: 20px;
@@ -966,15 +965,14 @@ section,
   height: 3px;
   background: var(--accent-color);
   left: 0;
-  right: 0;
+  right: auto;
   bottom: 0;
-  margin: auto;
+  margin: 0;
 }
 
 .section-title p {
   margin-bottom: 0;
 }
-
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
