@@ -6,18 +6,19 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   const slides = hero.querySelectorAll(".hero-slide");
-
-  const prevButton = document.querySelector("#heroPrev");
-  const nextButton = document.querySelector("#heroNext");
-  const dotsContainer = document.querySelector("#heroDots");
+  const prevButton = hero.querySelector("#heroPrev");
+  const nextButton = hero.querySelector("#heroNext");
+  const dotsContainer = hero.querySelector("#heroDots");
+  const loader = hero.querySelector("#heroLoader");
 
   if (!slides.length) {
     return;
   }
 
   let currentSlide = 0;
+  let autoplay = null;
 
-  let autoplay;
+  const slideDuration = 6000;
 
   /*
   | Criar indicadores
@@ -42,6 +43,26 @@ document.addEventListener("DOMContentLoaded", () => {
   const dots = dotsContainer.querySelectorAll(".hero-dot");
 
   /*
+  | Loader
+  */
+
+  function startLoader() {
+    if (!loader) {
+      return;
+    }
+
+    loader.classList.remove("loading");
+
+    /*
+    | Força o navegador a reiniciar a animação
+    */
+
+    void loader.offsetWidth;
+
+    loader.classList.add("loading");
+  }
+
+  /*
   | Mostrar slide
   */
 
@@ -55,6 +76,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     currentSlide = index;
+
+    startLoader();
   }
 
   /*
@@ -86,20 +109,20 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /*
-  | Botão próximo
+  | Próximo
   */
 
-  nextButton.addEventListener("click", () => {
+  nextButton?.addEventListener("click", () => {
     nextSlide();
 
     restartAutoplay();
   });
 
   /*
-  | Botão anterior
+  | Anterior
   */
 
-  prevButton.addEventListener("click", () => {
+  prevButton?.addEventListener("click", () => {
     previousSlide();
 
     restartAutoplay();
@@ -110,9 +133,11 @@ document.addEventListener("DOMContentLoaded", () => {
   */
 
   function startAutoplay() {
+    clearInterval(autoplay);
+
     autoplay = setInterval(() => {
       nextSlide();
-    }, 6000);
+    }, slideDuration);
   }
 
   /*

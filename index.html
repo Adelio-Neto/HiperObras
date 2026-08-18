@@ -92,6 +92,7 @@
 
     <main class="main">
       <!-- Hero Section -->
+      <!-- Hero Section -->
       <section id="hero" class="hero section">
         <!-- Slide 1 -->
         <div class="hero-slide active">
@@ -102,9 +103,9 @@
             />
           </div>
 
-          <div class="container position-relative">
-            <div class="row">
-              <div class="col-lg-8">
+          <div class="container position-relative h-100">
+            <div class="row h-100 align-items-center justify-content-center">
+              <div class="col-lg-8 text-center">
                 <h1>
                   Construindo o Futuro
                   <span class="accent">Hoje</span>
@@ -115,7 +116,9 @@
                   reformas e infraestrutura com qualidade, segurança e inovação.
                 </p>
 
-                <div class="hero-actions d-flex flex-wrap gap-3">
+                <div
+                  class="hero-actions d-flex flex-wrap justify-content-center gap-3"
+                >
                   <a href="#projects" class="btn-main"> Nossos Projetos </a>
 
                   <a href="#contact" class="btn-outline">
@@ -132,49 +135,14 @@
         <div class="hero-slide">
           <div class="hero-bg">
             <img
-              src="assets/img/construction/showcase-7.webp"
-              alt="Projeto de construção da HiperObras"
-            />
-          </div>
-
-          <div class="container position-relative">
-            <div class="row">
-              <div class="col-lg-8">
-                <h1>
-                  Qualidade que
-                  <span class="accent">Constrói</span>
-                </h1>
-
-                <p class="lead">
-                  Projetamos e executamos obras com foco na qualidade,
-                  eficiência e satisfação dos nossos clientes.
-                </p>
-
-                <div class="hero-actions d-flex flex-wrap gap-3">
-                  <a href="#projects" class="btn-main"> Conheça os Projetos </a>
-
-                  <a href="#contact" class="btn-outline">
-                    Fale Connosco
-                    <i class="bi bi-arrow-right"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Slide 3 -->
-        <div class="hero-slide">
-          <div class="hero-bg">
-            <img
               src="assets/img/construction/showcase-8.webp"
               alt="Infraestrutura da HiperObras"
             />
           </div>
 
-          <div class="container position-relative">
-            <div class="row">
-              <div class="col-lg-8">
+          <div class="container position-relative h-100">
+            <div class="row h-100 align-items-center justify-content-center">
+              <div class="col-lg-8 text-center">
                 <h1>
                   Grandes Projetos.
                   <span class="accent">Grandes Resultados.</span>
@@ -185,7 +153,9 @@
                   em espaços preparados para o futuro.
                 </p>
 
-                <div class="hero-actions d-flex flex-wrap gap-3">
+                <div
+                  class="hero-actions d-flex flex-wrap justify-content-center gap-3"
+                >
                   <a href="#projects" class="btn-main"> Ver Projetos </a>
 
                   <a href="#contact" class="btn-outline">
@@ -198,18 +168,25 @@
           </div>
         </div>
 
-        <!-- Controles -->
+        <!-- Botão anterior -->
         <button class="hero-prev" id="heroPrev" aria-label="Slide anterior">
           <i class="bi bi-chevron-left"></i>
         </button>
 
+        <!-- Botão próximo -->
         <button class="hero-next" id="heroNext" aria-label="Próximo slide">
           <i class="bi bi-chevron-right"></i>
         </button>
 
         <!-- Indicadores -->
         <div class="hero-dots" id="heroDots"></div>
+
+        <!-- Barra de carregamento -->
+        <div class="hero-loader">
+          <div class="hero-loader-progress" id="heroLoader"></div>
+        </div>
       </section>
+      <!-- /Hero Section -->
       <!-- /Hero Section -->
 
       <!-- About Section -->

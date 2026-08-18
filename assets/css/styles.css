@@ -1044,8 +1044,6 @@ section,
   font-size: 18px;
   line-height: 1.6;
   color: color-mix(in srgb, var(--contrast-color), transparent 20%);
-  max-width: 580px;
-  margin-bottom: 32px;
 }
 
 .hero .hero-actions {
@@ -4667,37 +4665,19 @@ section,
     font-size: 19px;
   }
 }
+/* =========================================================
+   HERO
+========================================================= */
 
 .hero {
   position: relative;
   overflow: hidden;
-  min-height: 90vh; /* ajusta ao valor que já usas no design */
+  min-height: 90vh;
 }
 
-.hero-slide {
-  position: absolute;
-  inset: 0;
-
-  opacity: 0;
-  visibility: hidden;
-
-  transition:
-    opacity 0.8s ease,
-    visibility 0.8s ease;
-}
-
-.hero-slide.active {
-  opacity: 1;
-  visibility: visible;
-  z-index: 1;
-}
-
-.hero-prev,
-.hero-next,
-.hero-dots {
-  z-index: 10;
-  display: none;
-}
+/* =========================================================
+   SLIDES
+========================================================= */
 
 .hero-slide {
   position: absolute;
@@ -4709,17 +4689,350 @@ section,
   opacity: 0;
   visibility: hidden;
 
+  transform: scale(1.06);
+
   transition:
-    opacity 0.8s ease,
-    visibility 0.8s ease;
+    opacity 1s ease,
+    transform 1.4s cubic-bezier(0.22, 1, 0.36, 1),
+    visibility 1s ease;
+
+  z-index: 0;
 }
 
 .hero-slide.active {
   opacity: 1;
   visibility: visible;
-  z-index: 1;
+
+  transform: scale(1);
+
+  z-index: 2;
 }
 
+/* =========================================================
+   BACKGROUND
+========================================================= */
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+
+  overflow: hidden;
+
+  z-index: -1;
+}
+
+.hero-bg img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transform: scale(1.02);
+
+  transition: transform 7s ease;
+}
+
+.hero-slide.active .hero-bg img {
+  transform: scale(1.08);
+}
+
+/* =========================================================
+   OVERLAY
+========================================================= */
+
+.hero-bg::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.72),
+    rgba(0, 0, 0, 0.42),
+    rgba(0, 0, 0, 0.58)
+  );
+}
+
+/* =========================================================
+   CONTEÚDO
+========================================================= */
+
+.hero-slide .container {
+  position: relative;
+  z-index: 3;
+}
+
+.hero-slide h1 {
+  opacity: 0;
+
+  transform: translateY(35px);
+
+  transition:
+    opacity 0.8s ease 0.2s,
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.2s;
+}
+
+.hero-slide p {
+  opacity: 0;
+
+  transform: translateY(25px);
+
+  transition:
+    opacity 0.8s ease 0.35s,
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.35s;
+}
+
+.hero-slide .hero-actions {
+  opacity: 0;
+
+  transform: translateY(20px);
+
+  transition:
+    opacity 0.8s ease 0.5s,
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.5s;
+}
+
+.hero-slide.active h1,
+.hero-slide.active p,
+.hero-slide.active .hero-actions {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+/* =========================================================
+   BOTÃO ANTERIOR
+========================================================= */
+
+.hero-prev,
+.hero-next {
+  position: absolute;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.35);
+
+  border-radius: 50%;
+
+  background: rgba(0, 0, 0, 0.25);
+
+  color: #fff;
+
+  cursor: pointer;
+
+  z-index: 10;
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.hero-prev {
+  left: 35px;
+}
+
+.hero-next {
+  right: 35px;
+}
+
+.hero-prev:hover,
+.hero-next:hover {
+  background: rgba(0, 0, 0, 0.55);
+
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+.hero-prev:hover {
+  transform: translateY(-50%) translateX(-4px);
+}
+
+.hero-next:hover {
+  transform: translateY(-50%) translateX(4px);
+}
+
+/* =========================================================
+   DOTS
+========================================================= */
+
+.hero-dots {
+  position: absolute;
+
+  bottom: 45px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  z-index: 10;
+}
+
+.hero-dot {
+  width: 9px;
+  height: 9px;
+
+  padding: 0;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.45);
+
+  cursor: pointer;
+
+  transition:
+    width 0.3s ease,
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.hero-dot:hover {
+  transform: scale(1.2);
+}
+
+.hero-dot.active {
+  width: 28px;
+
+  border-radius: 20px;
+
+  background: #fff;
+}
+
+/* =========================================================
+   LOADER
+========================================================= */
+
+.hero-loader {
+  position: absolute;
+
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: 4px;
+
+  background: #fff;
+
+  z-index: 20;
+
+  overflow: hidden;
+}
+
+.hero-loader-progress {
+  width: 0;
+  height: 100%;
+
+  background: var(--accent-color);
+
+  transform-origin: left;
+
+  opacity: 0;
+}
+
+.hero-loader-progress.loading {
+  opacity: 1;
+
+  animation: heroLoading 6s linear forwards;
+}
+
+@keyframes heroLoading {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+/* =========================================================
+   RESPONSIVO
+========================================================= */
+
+@media (max-width: 991px) {
+  .hero {
+    min-height: 80vh;
+  }
+
+  .hero-prev {
+    left: 20px;
+  }
+
+  .hero-next {
+    right: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero {
+    min-height: 75vh;
+  }
+
+  .hero-prev,
+  .hero-next {
+    width: 42px;
+    height: 42px;
+  }
+
+  .hero-prev {
+    left: 12px;
+  }
+
+  .hero-next {
+    right: 12px;
+  }
+
+  .hero-dots {
+    bottom: 30px;
+  }
+
+  .hero-slide h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-slide p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    min-height: 72vh;
+  }
+
+  .hero-prev,
+  .hero-next {
+    width: 38px;
+    height: 38px;
+  }
+
+  .hero-prev {
+    left: 8px;
+  }
+
+  .hero-next {
+    right: 8px;
+  }
+
+  .hero-slide h1 {
+    font-size: 1.9rem;
+  }
+}
 .project-filters {
   display: flex;
   flex-wrap: wrap;
