@@ -59,3 +59,41 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+new Swiper(".team-slider", {
+  loop: true,
+  speed: 600,
+
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false,
+  },
+
+  slidesPerView: 1,
+  spaceBetween: 24,
+
+  pagination: {
+    el: ".team-slider .swiper-pagination",
+    type: "fraction",
+  },
+
+  pagination: {
+    el: ".swiper-pagination",
+    type: "bullets",
+    clickable: true,
+  },
+
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+    },
+
+    992: {
+      slidesPerView: 3,
+    },
+
+    1200: {
+      slidesPerView: 4,
+    },
+  },
+});
