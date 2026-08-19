@@ -961,7 +961,8 @@ section,
 }
 
 .section-title p {
-  font-size: 26px;
+  color: #000;
+  font-size: 28px;
   font-weight: 700;
   line-height: 1.25;
   margin-bottom: 24px;
