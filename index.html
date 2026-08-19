@@ -302,9 +302,7 @@
 
             <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
               <div class="about-content">
-                <span class="section-label"
-                  ><i class="bi bi-building"></i> Sobre a HiperObras</span
-                >
+                <span class="section-label"> Sobre a HiperObras</span>
                 <h2>Excelência, Inovação e Compromisso com Cada Projeto</h2>
                 <p class="lead">
                   A Hiperobras Engenharia e Construção, Lda., com sede no Sumbe,
@@ -331,121 +329,93 @@
         <div class="container section-title" data-aos="fade-up">
           <h2>Nossos Serviços</h2>
           <p>
-            Soluções completas em construção civil, reformas e infraestrutura
-            com alto padrão de qualidade.
+            Soluções completas em construção civil,<br />
+            reformas e infraestrutura com alto padrão de qualidade.
           </p>
         </div>
 
         <div class="container" data-aos="fade-up" data-aos-delay="100">
-          <div class="row gy-4 align-items-stretch">
-            <div class="col-lg-4" data-aos="fade-right" data-aos-delay="100">
-              <div class="services-image">
-                <img
-                  src="assets/img/construction/showcase-7.webp"
-                  alt="Serviços HiperObras"
-                  class="img-fluid"
-                />
-                <div class="image-overlay">
-                  <h3>Transformamos Ideias em Estruturas Sólidas</h3>
-                  <a href="#contact" class="overlay-link"
-                    >Solicite uma Consultoria <i class="bi bi-arrow-right"></i
-                  ></a>
-                </div>
+          <div class="services-showcase">
+            <!-- MENU DOS SERVIÇOS -->
+            <div class="services-menu">
+              <div class="services-menu-list">
+                <button class="service-tab active" data-service="0">
+                  <span class="service-number">01</span>
+                  <span class="service-name">Construção Residencial</span>
+                </button>
+
+                <button class="service-tab" data-service="1">
+                  <span class="service-number">02</span>
+                  <span class="service-name">Obras Comerciais</span>
+                </button>
+
+                <button class="service-tab" data-service="2">
+                  <span class="service-number">03</span>
+                  <span class="service-name">Reformas e Restaurações</span>
+                </button>
+
+                <button class="service-tab" data-service="3">
+                  <span class="service-number">04</span>
+                  <span class="service-name">Infraestrutura e Urbanismo</span>
+                </button>
+
+                <button class="service-tab" data-service="4">
+                  <span class="service-number">05</span>
+                  <span class="service-name">Gerenciamento de Obras</span>
+                </button>
+
+                <button class="service-tab" data-service="5">
+                  <span class="service-number">06</span>
+                  <span class="service-name">Arquitetura e Design</span>
+                </button>
+              </div>
+
+              <!-- DROPDOWN MOBILE -->
+              <div class="services-select-wrapper">
+                <select id="servicesSelect" class="services-select">
+                  <option value="0">01 — Construção Residencial</option>
+
+                  <option value="1">02 — Obras Comerciais</option>
+
+                  <option value="2">03 — Reformas e Restaurações</option>
+
+                  <option value="3">04 — Infraestrutura e Urbanismo</option>
+
+                  <option value="4">05 — Gerenciamento de Obras</option>
+
+                  <option value="5">06 — Arquitetura e Design</option>
+                </select>
+
+                <i class="bi bi-chevron-down"></i>
               </div>
             </div>
 
-            <div class="col-lg-8">
-              <div class="row g-4">
-                <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
-                  <div class="service-item">
-                    <div class="service-icon">
-                      <i class="bi bi-house-door"></i>
-                    </div>
-                    <div class="service-body">
-                      <h4>Construção Residencial</h4>
-                      <p>
-                        Casas, apartamentos e condomínios com design moderno e
-                        materiais de primeira linha.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+            <!-- CONTEÚDO DO SERVIÇO -->
+            <div class="services-content">
+              <div class="service-content-inner">
+                <span class="service-category"> CONSTRUÇÃO CIVIL </span>
 
-                <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
-                  <div class="service-item">
-                    <div class="service-icon">
-                      <i class="bi bi-building"></i>
-                    </div>
-                    <div class="service-body">
-                      <h4>Obras Comerciais</h4>
-                      <p>
-                        Edifícios corporativos, lojas, galpões e espaços
-                        comerciais funcionais.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                <h3 id="serviceTitle">Construção Residencial</h3>
 
-                <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
-                  <div class="service-item">
-                    <div class="service-icon">
-                      <i class="bi bi-hammer"></i>
-                    </div>
-                    <div class="service-body">
-                      <h4>Reformas e Restaurações</h4>
-                      <p>
-                        Renovação completa de ambientes, com foco em eficiência
-                        e estética.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                <p id="serviceDescription">
+                  Casas, apartamentos e condomínios com design moderno e
+                  materiais de primeira linha.
+                </p>
 
-                <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
-                  <div class="service-item">
-                    <div class="service-icon">
-                      <i class="bi bi-signpost-split"></i>
-                    </div>
-                    <div class="service-body">
-                      <h4>Infraestrutura e Urbanismo</h4>
-                      <p>
-                        Pavimentação, redes de água/esgoto e projetos de
-                        mobilidade urbana.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
-                  <div class="service-item">
-                    <div class="service-icon">
-                      <i class="bi bi-clipboard-data"></i>
-                    </div>
-                    <div class="service-body">
-                      <h4>Gerenciamento de Obras</h4>
-                      <p>
-                        Gestão completa de cronograma, equipes, materiais e
-                        orçamento.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
-                  <div class="service-item">
-                    <div class="service-icon">
-                      <i class="bi bi-rulers"></i>
-                    </div>
-                    <div class="service-body">
-                      <h4>Arquitetura e Design</h4>
-                      <p>
-                        Projetos arquitetônicos inovadores, integrando estética
-                        e funcionalidade.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                <a href="#contact" class="service-link">
+                  Solicite uma Consultoria
+                  <i class="bi bi-arrow-right"></i>
+                </a>
               </div>
+            </div>
+
+            <!-- IMAGEM -->
+            <div class="services-image">
+              <img
+                id="serviceImage"
+                src="assets/img/construction/showcase-7.webp"
+                alt="Construção Residencial"
+              />
             </div>
           </div>
         </div>
@@ -563,8 +533,8 @@
         <div class="container section-title" data-aos="fade-up">
           <h2>Nossos Projetos</h2>
           <p>
-            Conheça alguns dos nossos principais trabalhos que refletem a
-            qualidade e a inovação da HiperObras.
+            Conheça alguns dos nossos principais trabalhos <br />
+            que refletem a qualidade e a inovação da HiperObras.
           </p>
         </div>
 
@@ -1018,8 +988,8 @@
         <div class="container section-title" data-aos="fade-up">
           <h2>Nossa Equipe</h2>
           <p>
-            Profissionais altamente capacitados e comprometidos com a excelência
-            em cada projeto.
+            Profissionais altamente capacitados <br />
+            e comprometidos com a excelência em cada projeto.
           </p>
         </div>
 
@@ -1162,7 +1132,7 @@
       <!-- Testimonials Section -->
       <section id="testimonials" class="testimonials section light-background">
         <div class="container section-title" data-aos="fade-up">
-          <h2>Depoimentos de Clientes</h2>
+          <h2>Testemunhos de Clientes</h2>
           <p>O que nossos clientes dizem sobre a HiperObras.</p>
         </div>
 
@@ -1195,13 +1165,6 @@
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <div class="testimonial-card">
-                  <div class="stars">
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                  </div>
                   <p>
                     "A HiperObras transformou nossa casa dos sonhos em
                     realidade. Profissionais competentes, materiais de qualidade
@@ -1223,13 +1186,6 @@
 
               <div class="swiper-slide">
                 <div class="testimonial-card">
-                  <div class="stars">
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                  </div>
                   <p>
                     "Contratamos a HiperObras para reformar nossa loja e o
                     resultado superou as expectativas. Atendimento ágil e
@@ -1251,13 +1207,6 @@
 
               <div class="swiper-slide">
                 <div class="testimonial-card">
-                  <div class="stars">
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-half"></i>
-                  </div>
                   <p>
                     "A HiperObras foi fundamental na construção do nosso
                     condomínio. Transparência, qualidade e compromisso com a
@@ -1279,13 +1228,6 @@
 
               <div class="swiper-slide">
                 <div class="testimonial-card">
-                  <div class="stars">
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                  </div>
                   <p>
                     "O projeto de infraestrutura da HiperObras trouxe mais
                     qualidade de vida para nossa cidade. Equipe exemplar!"
@@ -1356,8 +1298,8 @@
         <div class="container section-title" data-aos="fade-up">
           <h2>Fale Conosco</h2>
           <p>
-            Estamos prontos para atender você. Entre em contato pelo telefone,
-            e-mail ou visite nosso escritório.
+            Estamos prontos para atender você.<br />
+            Entre em contato pelo telefone, e-mail ou visite nosso escritório.
           </p>
         </div>
 
@@ -1649,5 +1591,6 @@
     <script src="assets/js/carousel.js"></script>
     <script src="assets/js/slide-cards.js"></script>
     <script src="assets/js/load.js"></script>
+    <script src="assets/js/service.js"></script>
   </body>
 </html>

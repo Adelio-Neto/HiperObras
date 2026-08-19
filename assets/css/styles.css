@@ -945,34 +945,51 @@ section,
 --------------------------------------------------------------*/
 .section-title {
   text-align: left;
-  padding-bottom: 60px;
+  padding-bottom: 10px;
   position: relative;
 }
 
 .section-title h2 {
-  font-size: 20px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-  position: relative;
-}
-
-.section-title h2:after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 50px;
-  height: 3px;
-  background: var(--accent-color);
-  left: 0;
-  right: auto;
-  bottom: 0;
-  margin: 0;
+  display: inline-block;
+  color: var(--accent-color);
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
 }
 
 .section-title p {
-  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  margin-bottom: 24px;
 }
+
+.stats .stats-content .label-tag {
+  display: inline-block;
+  color: var(--accent-color);
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+
+.stats .stats-content h2 {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 16px;
+}
+
+.stats .stats-content p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  margin-bottom: 24px;
+}
+
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
@@ -1415,122 +1432,352 @@ section,
 /*--------------------------------------------------------------
 # Services Section
 --------------------------------------------------------------*/
-.services .services-image {
-  position: relative;
-  border-radius: 8px;
-  overflow: hidden;
+
+.services .services-showcase {
+  display: grid;
+  grid-template-columns: 370px minmax(0, 1fr) minmax(0, 1.35fr);
+  align-items: stretch;
+  gap: 0;
+  min-height: 365px;
+}
+
+/*--------------------------------------------------------------
+# Services Menu
+--------------------------------------------------------------*/
+
+.services .services-menu {
+  padding: 0 5px;
+  display: flex;
+  height: 365px;
+}
+
+.services .services-menu-list {
+  width: 100%;
   height: 100%;
-  min-height: 400px;
+  background: var(--accent-color);
+  border-radius: 6px;
+  padding: 18px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Botões */
+
+.services .service-tab {
+  position: relative;
+  width: 100%;
+  min-height: 52px;
+  padding: 8px 28px;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: color-mix(in srgb, var(--contrast-color), transparent 45%);
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  text-align: left;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+/* Número */
+
+.services .service-tab .service-number {
+  min-width: 28px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Nome */
+
+.services .service-tab .service-name {
+  font-size: 18px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* Ativo */
+
+.services .service-tab.active {
+  color: var(--contrast-color);
+}
+
+/* Pequena linha lateral */
+
+.services .service-tab.active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 12px;
+  height: 2px;
+  background: var(--contrast-color);
+  transform: translateY(-50%);
+}
+
+/* Hover */
+
+.services .service-tab:hover {
+  color: var(--contrast-color);
+}
+
+/*--------------------------------------------------------------
+# Services Content
+--------------------------------------------------------------*/
+
+.services .services-content {
+  height: 365px;
+  padding: 40px 15px;
+  display: flex;
+  align-items: center;
+  background: transparent;
+}
+
+.services .service-content-inner {
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Categoria */
+
+.services .service-category {
+  display: block;
+  margin-bottom: 14px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: var(--accent-color);
+}
+
+/* Título */
+
+.services .service-content-inner h3 {
+  margin: 0 0 42px;
+  padding: 0;
+  font-size: 31px;
+  line-height: 1.05;
+  font-weight: 400;
+  color: var(--heading-color);
+}
+
+/* Descrição */
+
+.services .service-content-inner p {
+  margin: 0 0 30px;
+  padding: 0;
+  max-width: 330px;
+  font-size: 16px;
+  line-height: 1.45;
+  color: color-mix(in srgb, var(--default-color), transparent 15%);
+}
+
+/* Link */
+
+.services .service-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  margin: 0;
+  padding: 0;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  color: var(--default-color);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.services .service-link i {
+  font-size: 20px;
+  color: var(--accent-color);
+  transition: transform 0.3s ease;
+}
+
+.services .service-link:hover {
+  color: var(--accent-color);
+}
+
+.services .service-link:hover i {
+  transform: translateX(6px);
+}
+
+/*--------------------------------------------------------------
+# Services Image
+--------------------------------------------------------------*/
+
+.services .services-image {
+  height: 365px;
+  margin: 0 20px 0 0;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
 }
 
 .services .services-image img {
   width: 100%;
   height: 100%;
+  display: block;
   object-fit: cover;
+  transition:
+    opacity 0.35s ease,
+    transform 0.5s ease;
 }
 
-.services .services-image .image-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to top,
-    rgba(15, 42, 68, 0.95) 0%,
-    rgba(15, 42, 68, 0.3) 100%
-  );
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 32px;
+/*--------------------------------------------------------------
+# Mobile Dropdown
+--------------------------------------------------------------*/
+
+.services .services-select-wrapper {
+  display: none;
+  position: relative;
+  width: 100%;
 }
 
-.services .services-image .image-overlay h3 {
-  font-size: 24px;
-  font-weight: 700;
-  color: #ffffff;
-  line-height: 1.3;
-  margin-bottom: 16px;
-}
-
-.services .services-image .image-overlay .overlay-link {
-  color: var(--accent-color);
-  font-weight: 600;
-  font-size: 14px;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  transition: gap 0.3s ease;
-}
-
-.services .services-image .image-overlay .overlay-link:hover {
-  gap: 12px;
-}
-
-.services .service-item {
-  display: flex;
-  gap: 16px;
-  padding: 24px;
-  border-radius: 8px;
-  background: var(--surface-color);
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-  height: 100%;
-  transition: all 0.3s ease;
-}
-
-.services .service-item:hover {
-  border-color: var(--accent-color);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-}
-
-.services .service-item:hover .service-icon {
+.services .services-select {
+  width: 100%;
+  height: 52px;
+  padding: 0 45px 0 18px;
+  appearance: none;
+  border: 0;
+  border-radius: 6px;
   background: var(--accent-color);
-}
-
-.services .service-item:hover .service-icon i {
   color: var(--contrast-color);
-}
-
-.services .service-item .service-icon {
-  width: 48px;
-  height: 48px;
-  min-width: 48px;
-  border-radius: 8px;
-  background: color-mix(in srgb, var(--accent-color), transparent 90%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-}
-
-.services .service-item .service-icon i {
-  font-size: 24px;
-  color: var(--accent-color);
-  transition: all 0.3s ease;
-}
-
-.services .service-item .service-body h4 {
-  font-size: 18px;
-  font-weight: 600;
-  margin-bottom: 8px;
-}
-
-.services .service-item .service-body p {
   font-size: 14px;
-  line-height: 1.6;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
-  margin: 0;
+  font-weight: 600;
+  cursor: pointer;
 }
+
+.services .services-select-wrapper > i {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  color: var(--contrast-color);
+  font-size: 16px;
+  pointer-events: none;
+  transform: translateY(-50%);
+}
+
+/*--------------------------------------------------------------
+# Tablet
+--------------------------------------------------------------*/
 
 @media (max-width: 991px) {
+  .services .services-showcase {
+    grid-template-columns: 220px minmax(0, 1fr);
+    min-height: 350px;
+  }
+
+  .services .services-menu {
+    height: 350px;
+  }
+
+  .services .services-content {
+    height: 350px;
+    padding: 35px;
+  }
+
   .services .services-image {
-    min-height: 300px;
-    margin-bottom: 8px;
+    grid-column: 1 / -1;
+    height: 300px;
+    margin: 25px 20px 0;
+  }
+
+  .services .service-content-inner h3 {
+    font-size: 28px;
   }
 }
 
-@media (max-width: 575px) {
-  .services .service-item {
+/*--------------------------------------------------------------
+# Mobile
+--------------------------------------------------------------*/
+
+@media (max-width: 767px) {
+  .services .services-showcase {
+    display: flex;
     flex-direction: column;
-    padding: 24px;
+    min-height: auto;
+  }
+
+  /* Menu */
+
+  .services .services-menu {
+    width: 100%;
+    height: auto;
+    padding: 0;
+  }
+
+  .services .services-menu-list {
+    display: none;
+  }
+
+  .services .services-select-wrapper {
+    display: block;
+  }
+
+  /* Conteúdo */
+
+  .services .services-content {
+    width: 100%;
+    height: auto;
+    min-height: 300px;
+    padding: 45px 25px;
+  }
+
+  .services .service-content-inner {
+    max-width: none;
+  }
+
+  .services .service-content-inner h3 {
+    margin-bottom: 25px;
+    font-size: 28px;
+  }
+
+  .services .service-content-inner p {
+    max-width: none;
+    margin: 0 0 30px;
+  }
+
+  /* Imagem */
+
+  .services .services-image {
+    width: 100%;
+    height: 260px;
+    margin: 0;
+    border-radius: 5px;
+  }
+
+  .services .services-image img {
+    height: 260px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Small Mobile
+--------------------------------------------------------------*/
+
+@media (max-width: 575px) {
+  .services .services-content {
+    min-height: 280px;
+    padding: 35px 20px;
+  }
+
+  .services .service-content-inner h3 {
+    font-size: 25px;
+  }
+
+  .services .service-content-inner p {
+    font-size: 15px;
+  }
+
+  .services .services-image {
+    height: 220px;
+  }
+
+  .services .services-image img {
+    height: 220px;
   }
 }
 
@@ -4959,7 +5206,7 @@ section,
 .hero-loader-progress.loading {
   opacity: 1;
 
-  animation: heroLoading 6s linear forwards;
+  animation: heroLoading 9s linear forwards;
 }
 
 @keyframes heroLoading {
