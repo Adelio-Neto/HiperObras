@@ -962,7 +962,7 @@ section,
 
 .section-title p {
   color: var(--accent-color);
-  font-size: 30px;
+  font-size: 26px;
   font-weight: 700;
   line-height: 1.25;
   margin-bottom: 24px;
@@ -5414,7 +5414,7 @@ section,
   -moz-transform: translate(-109px, -94px);
 }
 :root {
-  --preloader-color-dark: #fff;
+  --preloader-color-dark: var(--accent-color);
   --preloader-color-light: var(--accent-color);
 }
 
@@ -5876,4 +5876,28 @@ section,
 
 .team .team-slider .swiper-pagination .swiper-pagination-bullet-active {
   background: var(--accent-color);
+}
+
+/*--------------------------------------------------------------
+# Clients Section
+--------------------------------------------------------------*/
+.clients {
+  padding: 12px 0;
+}
+
+.clients .swiper {
+  padding: 10px 0;
+}
+
+.clients .swiper-wrapper {
+  height: auto;
+}
+
+.clients .swiper-slide img {
+  transition: 0.3s;
+  padding: 0 10px;
+}
+
+.clients .swiper-slide img:hover {
+  transform: scale(1.1);
 }
