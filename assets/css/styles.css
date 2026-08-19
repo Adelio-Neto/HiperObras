@@ -961,7 +961,6 @@ section,
 }
 
 .section-title p {
-  color: var(--accent-color);
   font-size: 26px;
   font-weight: 700;
   line-height: 1.25;
