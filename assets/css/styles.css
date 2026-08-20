@@ -858,6 +858,7 @@ h6 {
   width: 40px;
   height: 40px;
   border-radius: 4px;
+  border: 1px solid #dadada;
   transition: all 0.4s;
 }
 
