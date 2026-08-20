@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Navbar Editorial</title>
+  <style>
+    /* ===== Reset & base ===== */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg: #f5f3ef;
+      --bg-elev: #ffffff;
+      --text: #1a1a1a;
+      --text-muted: #6b6b6b;
+      --border: rgba(26, 26, 26, 0.12);
+      --accent: #ff4d2e;
+      --accent-soft: #ffe5df;
+      --transition: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    [data-theme="dark"] {
+      --bg: #0e0e0e;
+      --bg-elev: #1a1a1a;
+      --text: #f5f3ef;
+      --text-muted: #8b8b8b;
+      --border: rgba(245, 243, 239, 0.12);
+      --accent: #ff6b4a;
+      --accent-soft: #2a1813;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 250vh;
+      transition: background 0.4s var(--transition), color 0.4s var(--transition);
+      font-feature-settings: "ss01", "cv11";
+    }
+
+    /* ===== Navbar estilo editorial ===== */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      padding: 1.5rem 0;
+      background: var(--bg);
+      border-bottom: 1px solid transparent;
+      transition: all 0.3s var(--transition);
+    }
+
+    .navbar.scrolled {
+      padding: 0.9rem 0;
+      background: color-mix(in srgb, var(--bg) 85%, transparent);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+
+    /* ===== Logo com numeração editorial ===== */
+    .logo {
+      display: flex;
+      align-items: baseline;
+      gap: 0.6rem;
+      text-decoration: none;
+      color: var(--text);
+      transition: opacity 0.2s var(--transition);
+    }
+
+    .logo:hover {
+      opacity: 0.7;
+    }
+
+    .logo-number {
+      font-family: "JetBrains Mono", "SF Mono", monospace;
+      font-size: 0.7rem;
+      color: var(--accent);
+      letter-spacing: 0.05em;
+    }
+
+    .logo-text {
+      font-size: 1.5rem;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      line-height: 1;
+    }
+
+    .logo-text em {
+      font-style: italic;
+      font-weight: 400;
+      color: var(--text-muted);
+    }
+
+    /* ===== Nav links com underline deslizante ===== */
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2.25rem;
+    }
+
+    .nav-link {
+      position: relative;
+      padding: 0.25rem 0;
+      text-decoration: none;
+      color: var(--text);
+      font-size: 0.95rem;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+    }
+
+    /* Underline que "desenha" da esquerda pra direita */
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 100%;
+      height: 1.5px;
+      background: var(--accent);
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.4s var(--transition);
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    .nav-link .nav-num {
+      font-family: "JetBrains Mono", "SF Mono", monospace;
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      margin-right: 0.4rem;
+      vertical-align: super;
+    }
+
+    .nav-link.active .nav-num {
+      color: var(--accent);
+    }
+
+    /* ===== Nav actions ===== */
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .theme-toggle {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text);
+      cursor: pointer;
+      font-size: 0.95rem;
+      transition: all 0.25s var(--transition);
+    }
+
+    .theme-toggle:hover {
+      background: var(--text);
+      color: var(--bg);
+      border-color: var(--text);
+    }
+
+    /* CTA estilo botão minimalista com seta */
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.65rem 1.1rem;
+      background: var(--text);
+      color: var(--bg);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      transition: all 0.3s var(--transition);
+      border: 1px solid var(--text);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-primary::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: var(--accent);
+      transform: translateY(100%);
+      transition: transform 0.3s var(--transition);
+    }
+
+    .btn-primary:hover::before {
+      transform: translateY(0);
+    }
+
+    .btn-primary > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .btn-arrow {
+      display: inline-block;
+      transition: transform 0.3s var(--transition);
+    }
+
+    .btn-primary:hover .btn-arrow {
+      transform: translateX(4px);
+    }
+
+    /* ===== Mobile toggle (X minimalista) ===== */
+    .menu-toggle {
+      display: none;
+      width: 36px;
+      height: 36px;
+      background: transparent;
+      border: 1px solid var(--border);
+      cursor: pointer;
+      position: relative;
+      transition: all 0.25s var(--transition);
+    }
+
+    .menu-toggle::before,
+    .menu-toggle::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 16px;
+      height: 1.5px;
+      background: var(--text);
+      transition: all 0.3s var(--transition);
+    }
+
+    .menu-toggle::before {
+      transform: translate(-50%, -50%);
+    }
+
+    .menu-toggle::after {
+      transform: translate(-50%, -50%) rotate(90deg);
+    }
+
+    .menu-toggle[aria-expanded="true"]::before {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    .menu-toggle[aria-expanded="true"]::after {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+    .menu-toggle:hover {
+      background: var(--text);
+      border-color: var(--text);
+    }
+
+    .menu-toggle:hover::before,
+    .menu-toggle:hover::after {
+      background: var(--bg);
+    }
+
+    /* ===== Sidebar drawer (mobile) ===== */
+    .sidebar {
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 100vh;
+      width: 100%;
+      max-width: 480px;
+      background: var(--bg-elev);
+      z-index: 998;
+      transform: translateX(100%);
+      transition: transform 0.5s var(--transition);
+      padding: 6rem 3rem 3rem;
+      display: flex;
+      flex-direction: column;
+      border-left: 1px solid var(--border);
+    }
+
+    .sidebar.open {
+      transform: translateX(0);
+    }
+
+    .sidebar-header {
+      position: absolute;
+      top: 1.5rem;
+      left: 3rem;
+      right: 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .sidebar-label {
+      font-family: "JetBrains Mono", "SF Mono", monospace;
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .sidebar-nav {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .sidebar-link {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      padding: 1.2rem 0;
+      text-decoration: none;
+      color: var(--text);
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      border-bottom: 1px solid var(--border);
+      transition: all 0.3s var(--transition);
+    }
+
+    .sidebar-link .nav-num {
+      font-family: "JetBrains Mono", "SF Mono", monospace;
+      font-size: 0.75rem;
+      font-weight: 400;
+      color: var(--text-muted);
+    }
+
+    .sidebar-link:hover {
+      color: var(--accent);
+      padding-left: 1rem;
+    }
+
+    .sidebar-link.active {
+      color: var(--accent);
+    }
+
+    .sidebar-link.active .nav-num {
+      color: var(--accent);
+    }
+
+    .sidebar-footer {
+      margin-top: auto;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .sidebar-footer p {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .sidebar-footer a {
+      display: block;
+      margin-top: 0.5rem;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: 500;
+    }
+
+    .sidebar-footer a:hover {
+      color: var(--accent);
+    }
+
+    /* ===== Hero editorial ===== */
+    .hero {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 10rem 3rem 6rem;
+    }
+
+    .hero-meta {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+      font-family: "JetBrains Mono", "SF Mono", monospace;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .hero-meta span:first-child {
+      color: var(--accent);
+    }
+
+    .hero-meta .dot {
+      width: 4px;
+      height: 4px;
+      background: var(--text-muted);
+      border-radius: 50%;
+    }
+
+    .hero h1 {
+      font-size: clamp(3rem, 8vw, 6.5rem);
+      font-weight: 800;
+      letter-spacing: -0.05em;
+      line-height: 0.95;
+      max-width: 14ch;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      font-weight: 400;
+      color: var(--accent);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 3rem;
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .hero-grid p {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      max-width: 50ch;
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .stat-num {
+      font-size: 2.5rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: var(--text);
+    }
+
+    .stat-num em {
+      font-style: italic;
+      font-weight: 400;
+      color: var(--accent);
+    }
+
+    .stat-label {
+      font-family: "JetBrains Mono", "SF Mono", monospace;
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-top: 0.25rem;
+    }
+
+    /* ===== Demo sections ===== */
+    .demo-section {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 6rem 3rem;
+      border-top: 1px solid var(--border);
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 3rem;
+    }
+
+    .demo-section .section-num {
+      font-family: "JetBrains Mono", "SF Mono", monospace;
+      font-size: 0.75rem;
+      color: var(--accent);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .demo-section h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      line-height: 1.05;
+      max-width: 18ch;
+      margin-bottom: 1.5rem;
+    }
+
+    .demo-section h2 em {
+      font-style: italic;
+      font-weight: 400;
+      color: var(--text-muted);
+    }
+
+    .demo-section p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      max-width: 60ch;
+      margin-bottom: 1rem;
+    }
+
+    .demo-section ul {
+      list-style: none;
+      margin-top: 1.5rem;
+    }
+
+    .demo-section li {
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      gap: 1rem;
+      align-items: baseline;
+    }
+
+    .demo-section li::before {
+      content: "—";
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    /* ===== Marquee no footer ===== */
+    .marquee {
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 1.5rem 0;
+      overflow: hidden;
+      background: var(--bg-elev);
+    }
+
+    .marquee-inner {
+      display: flex;
+      gap: 3rem;
+      animation: scroll 20s linear infinite;
+      white-space: nowrap;
+    }
+
+    .marquee-inner span {
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      color: var(--text);
+    }
+
+    .marquee-inner .accent {
+      color: var(--accent);
+      font-style: italic;
+      font-weight: 400;
+    }
+
+    @keyframes scroll {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 960px) {
+      .nav-container {
+        padding: 0 1.5rem;
+      }
+      .nav-links {
+        display: none;
+      }
+      .menu-toggle {
+        display: block;
+      }
+      .btn-primary span:not(.btn-arrow) {
+        display: none;
+      }
+      .btn-primary {
+        padding: 0.65rem 0.85rem;
+      }
+      .hero,
+      .demo-section {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+      }
+      .hero-grid,
+      .demo-section {
+        grid-template-columns: 1fr;
+      }
+      .sidebar {
+        padding: 6rem 1.5rem 2rem;
+      }
+      .sidebar-header {
+        left: 1.5rem;
+        right: 1.5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-stats {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+    }
+
+    /* Overlay */
+    body.menu-open::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 997;
+      animation: fadeIn 0.3s var(--transition);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">
+        <span class="logo-number">N°01</span>
+        <span class="logo-text">Studio<em>arc</em></span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#home" class="nav-link active"><span class="nav-num">01</span>Início</a>
+        <a href="#sobre" class="nav-link"><span class="nav-num">02</span>Sobre</a>
+        <a href="#projetos" class="nav-link"><span class="nav-num">03</span>Projetos</a>
+        <a href="#servicos" class="nav-link"><span class="nav-num">04</span>Serviços</a>
+        <a href="#contato" class="nav-link"><span class="nav-num">05</span>Contato</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+          <span class="theme-icon">☾</span>
+        </button>
+        <a href="#contato" class="btn-primary">
+          <span>Iniciar</span>
+          <span class="btn-arrow">→</span>
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false"></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sidebar drawer (mobile) -->
+  <aside class="sidebar" id="sidebar" aria-hidden="true">
+    <div class="sidebar-header">
+      <span class="sidebar-label">Menu / 2026</span>
+    </div>
+    <nav class="sidebar-nav">
+      <a href="#home" class="sidebar-link active"><span><span class="nav-num">01 /</span> Início</span></a>
+      <a href="#sobre" class="sidebar-link"><span><span class="nav-num">02 /</span> Sobre</span></a>
+      <a href="#projetos" class="sidebar-link"><span><span class="nav-num">03 /</span> Projetos</span></a>
+      <a href="#servicos" class="sidebar-link"><span><span class="nav-num">04 /</span> Serviços</span></a>
+      <a href="#contato" class="sidebar-link"><span><span class="nav-num">05 /</span> Contato</span></a>
+    </nav>
+    <div class="sidebar-footer">
+      <p>Contato direto</p>
+      <a href="mailto:ola@studioarc.com">ola@studioarc.com</a>
+      <a href="tel:+5511999999999">+55 11 99999-9999</a>
+    </div>
+  </aside>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-meta">
+        <span>● Ao vivo</span>
+        <span>Est. 2026</span>
+        <span class="dot"></span>
+        <span>São Paulo, BR</span>
+        <span class="dot"></span>
+        <span>Vol. 01</span>
+      </div>
+      <h1>Design que <em>respira</em>, código que performa.</h1>
+      <div class="hero-grid">
+        <p>Um navbar editorial, sem pílulas, sem gradientes exagerados. Só tipografia forte, números mono e micro-interações cirúrgicas. Pra quem quer outro tipo de estética.</p>
+        <div class="hero-stats">
+          <div>
+            <div class="stat-num">12<em>+</em></div>
+            <div class="stat-label">Projetos</div>
+          </div>
+          <div>
+            <div class="stat-num">98<em>%</em></div>
+            <div class="stat-label">Performance</div>
+          </div>
+          <div>
+            <div class="stat-num">04<em>·</em></div>
+            <div class="stat-label">Anos</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-inner">
+        <span>Design Editorial</span>
+        <span class="accent">/</span>
+        <span>Tipografia Forte</span>
+        <span class="accent">/</span>
+        <span>Interação Cirúrgica</span>
+        <span class="accent">/</span>
+        <span>Performance Nativa</span>
+        <span class="accent">/</span>
+        <span>Design Editorial</span>
+        <span class="accent">/</span>
+        <span>Tipografia Forte</span>
+        <span class="accent">/</span>
+        <span>Interação Cirúrgica</span>
+        <span class="accent">/</span>
+        <span>Performance Nativa</span>
+        <span class="accent">/</span>
+      </div>
+    </div>
+
+    <section id="sobre" class="demo-section">
+      <div>
+        <span class="section-num">— 02 / Sobre</span>
+      </div>
+      <div>
+        <h2>Estética <em>editorial</em>, comportamento de produto.</h2>
+        <p>O nome é "Studio<em>arc</em>" e a vibe é de revista. Mas por baixo: scroll spy, sidebar com animação de slide, tema dark/light, e zero dependências externas.</p>
+        <p>O detalhe que faz a diferença: numerais mono (JetBrains Mono) usados em metadados — mesma linguagem que você vê em publicações como Bloomberg Businessweek ou Pentagram.</p>
+        <ul>
+          <li>Underline que desenha da esquerda pra direita</li>
+          <li>Logo com numeração editorial (N°01)</li>
+          <li>Sidebar com tipografia em 2rem</li>
+          <li>Marquee infinito no meio da página</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="projetos" class="demo-section">
+      <div>
+        <span class="section-num">— 03 / Projetos</span>
+      </div>
+      <div>
+        <h2>Layout <em>assimétrico</em>, grid inteligente.</h2>
+        <p>No desktop, as seções usam um grid de 2 colunas (1/3 + 2/3). O número da seção fica isolado à esquerda, criando ritmo visual. No mobile, vira coluna única.</p>
+        <p>Esse é o tipo de detalhe que você só percebe quando usa. Sutil, mas eficiente.</p>
+      </div>
+    </section>
+
+    <section id="servicos" class="demo-section">
+      <div>
+        <span class="section-num">— 04 / Serviços</span>
+      </div>
+      <div>
+        <h2>Botões que <em>conversam</em> com você.</h2>
+        <p>O CTA "Iniciar →" tem fill animado (de baixo pra cima) e a seta desliza pra direita no hover. Sutil o suficiente pra não distrair, marcante o suficiente pra você lembrar.</p>
+        <p>O toggle de tema também segue a mesma linguagem minimalista: quadrado, borda fina, sem border-radius exagerado. Hover inverte as cores.</p>
+      </div>
+    </section>
+
+    <section id="contato" class="demo-section">
+      <div>
+        <span class="section-num">— 05 / Contato</span>
+      </div>
+      <div>
+        <h2>Mobile <em>first</em>, mas com opinião.</h2>
+        <p>A sidebar abre com animação de 0.5s com cubic-bezier. Cada link tem seu número ("01 /", "02 /", etc) e ganha padding-left no hover — como se fosse "puxado" pra dentro.</p>
+        <p>Testa aí: clica no quadradinho ☰, depois fecha com ESC ou clicando fora. Depois clica no ☾/☀ pra ver o tema dark — o accent fica mais claro, mas a linguagem continua a mesma.</p>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    const menuToggle = document.getElementById('menuToggle');
+    const sidebar = document.getElementById('sidebar');
+    const sidebarLinks = document.querySelectorAll('.sidebar-link');
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = themeToggle.querySelector('.theme-icon');
+    const links = document.querySelectorAll('.nav-link');
+    const SCROLL_THRESHOLD = 30;
+
+    // ===== Navbar scroll state =====
+    function handleScroll() {
+      if (window.scrollY > SCROLL_THRESHOLD) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    }
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    // ===== Sidebar toggle =====
+    function openSidebar() {
+      sidebar.classList.add('open');
+      sidebar.setAttribute('aria-hidden', 'false');
+      menuToggle.setAttribute('aria-expanded', 'true');
+      document.body.classList.add('menu-open');
+    }
+
+    function closeSidebar() {
+      sidebar.classList.remove('open');
+      sidebar.setAttribute('aria-hidden', 'true');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      document.body.classList.remove('menu-open');
+    }
+
+    menuToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (sidebar.classList.contains('open')) closeSidebar();
+      else openSidebar();
+    });
+
+    // Fecha ao clicar num link
+    sidebarLinks.forEach((link) => {
+      link.addEventListener('click', () => closeSidebar());
+    });
+
+    // Fecha ao clicar fora (no overlay)
+    document.addEventListener('click', (e) => {
+      if (
+        sidebar.classList.contains('open') &&
+        !sidebar.contains(e.target) &&
+        !menuToggle.contains(e.target)
+      ) {
+        closeSidebar();
+      }
+    });
+
+    // ESC fecha
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && sidebar.classList.contains('open')) {
+        closeSidebar();
+      }
+    });
+
+    // ===== Scroll spy (atualiza desktop e sidebar) =====
+    const sections = document.querySelectorAll('section[id]');
+
+    function setActiveLink() {
+      const scrollPos = window.scrollY + 150;
+
+      sections.forEach((section) => {
+        const top = section.offsetTop;
+        const height = section.offsetHeight;
+        const id = section.getAttribute('id');
+
+        const desktopLink = document.querySelector(`.nav-link[href="#${id}"]`);
+        const sidebarLink = document.querySelector(`.sidebar-link[href="#${id}"]`);
+
+        if (scrollPos >= top && scrollPos < top + height) {
+          links.forEach((l) => l.classList.remove('active'));
+          sidebarLinks.forEach((l) => l.classList.remove('active'));
+          if (desktopLink) desktopLink.classList.add('active');
+          if (sidebarLink) sidebarLink.classList.add('active');
+        }
+      });
+    }
+    window.addEventListener('scroll', setActiveLink, { passive: true });
+
+    // ===== Theme toggle =====
+    const THEME_KEY = 'studioarc-theme';
+
+    function applyTheme(theme) {
+      if (theme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        themeIcon.textContent = '☀';
+      } else {
+        document.documentElement.removeAttribute('data-theme');
+        themeIcon.textContent = '☾';
+      }
+    }
+
+    function toggleTheme() {
+      const current = document.documentElement.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      applyTheme(next);
+      try { localStorage.setItem(THEME_KEY, next); } catch (e) {}
+    }
+
+    try {
+      const saved = localStorage.getItem(THEME_KEY);
+      if (saved) applyTheme(saved);
+      else if (window.matchMedia('(prefers-color-scheme: dark)').matches) applyTheme('dark');
+    } catch (e) {}
+
+    themeToggle.addEventListener('click', toggleTheme);
+
+    // Init
+    handleScroll();
+    setActiveLink();
+  </script>
+</body>
+</html>

@@ -6,7 +6,7 @@
     "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
     Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Nunito", sans-serif;
+  --heading-font: "Noto Sans", sans-serif;
   --nav-font: "Raleway", sans-serif;
 }
 
@@ -4943,7 +4943,6 @@ section,
 .hero-slide {
   position: absolute;
   inset: 0;
-
   display: flex;
   align-items: center;
 
