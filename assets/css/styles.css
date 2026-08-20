@@ -950,6 +950,14 @@ section,
 }
 
 .section-title h2 {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 16px;
+  color: #000;
+}
+
+.section-title .label-tag {
   display: inline-block;
   color: var(--accent-color);
   gap: 8px;
