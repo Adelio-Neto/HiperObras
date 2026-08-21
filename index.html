@@ -49,45 +49,78 @@
   </head>
 
   <body class="index-page">
-    <header id="header" class="header d-flex align-items-center sticky-top">
-      <div
-        class="container container-xxl position-relative d-flex align-items-center justify-content-between"
-      >
-        <a href="index.html" class="logo d-flex align-items-center me-auto">
-          <h1 class="sitename">HiperObras</h1>
-        </a>
+    <header class="navbar" id="navbar">
+      <div class="container">
+        <div class="nav-container">
+          <a href="#" class="logo">
+            <span class="logo-text">HiperObras</span>
+          </a>
 
-        <nav id="navmenu" class="navmenu">
-          <ul>
-            <li><a href="#hero" class="active">Início</a></li>
-            <li><a href="index.html#about">Sobre</a></li>
-            <li><a href="index.html#services">Serviços</a></li>
-            <li><a href="index.html#projects">Projetos</a></li>
-            <li><a href="index.html#team">Equipe</a></li>
-            <li class="dropdown">
-              <a href="#" class="toggle-dropdown"
-                ><span>Páginas</span>
-                <i class="bi bi-chevron-down toggle-dropdown"></i
-              ></a>
-              <ul>
-                <li><a href="service.html">Detalhes do Serviço</a></li>
-                <li><a href="project.html">Detalhes do Projeto</a></li>
-                <li><a href="news.html">Detalhes das Notícias</a></li>
-              </ul>
-            </li>
-            <li><a href="#contact">Contato</a></li>
-          </ul>
-          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-        </nav>
+          <nav class="nav-links">
+            <a href="#hero" class="nav-link active"
+              ><span class="nav-num">01</span>Início</a
+            >
+            <a href="#about" class="nav-link"
+              ><span class="nav-num">02</span>Sobre Nós</a
+            >
+            <a href="#services" class="nav-link"
+              ><span class="nav-num">03</span>Serviços</a
+            >
+            <a href="#projects" class="nav-link"
+              ><span class="nav-num">04</span>Projetos</a
+            >
 
-        <div class="header-actions d-none d-xl-flex align-items-center">
-          <a class="action-link" href="tel:+5511999999999"
-            ><i class="bi bi-telephone"></i><span>+55 (11) 99999-9999</span></a
-          >
+            <a href="#team" class="nav-link"
+              ><span class="nav-num">05</span>Equipe</a
+            >
+            <a href="#featured-posts" class="nav-link"
+              ><span class="nav-num">06</span>Notícias</a
+            >
+          </nav>
+
+          <div class="nav-actions">
+            <a href="#contact" class="btn-primary desktop-only">
+              <span>Contate-nos</span>
+              <span class="btn-arrow">→</span>
+            </a>
+            <button
+              class="menu-toggle"
+              id="menuToggle"
+              aria-label="Abrir menu"
+              aria-expanded="false"
+            ></button>
+          </div>
         </div>
       </div>
     </header>
 
+    <aside class="sidebar" id="sidebar" aria-hidden="true">
+      <nav class="sidebar-nav">
+        <a href="#hero" class="sidebar-link active"
+          ><span><span class="nav-num">01 /</span> Início</span></a
+        >
+        <a href="#about" class="sidebar-link"
+          ><span><span class="nav-num">02 /</span> Sobre</span></a
+        >
+        <a href="#services" class="sidebar-link"
+          ><span><span class="nav-num">03 /</span> Serviços</span></a
+        >
+        <a href="#projects" class="sidebar-link"
+          ><span><span class="nav-num">04 /</span> Projetos</span></a
+        >
+
+        <a href="#team" class="sidebar-link"
+          ><span><span class="nav-num">05 /</span> Equipe</span></a
+        >
+        <a href="#featured-posts" class="sidebar-link"
+          ><span><span class="nav-num">06 /</span> Notícias</span></a
+        >
+
+        <a href="#contact" class="sidebar-link sidebar-cta"
+          ><span><span class="nav-num">07 /</span> contate-nos </span></a
+        >
+      </nav>
+    </aside>
     <main class="main">
       <!-- Hero Section -->
 
@@ -306,7 +339,7 @@
       <!-- /Clients Section -->
 
       <!--  Section Card -->
-      <section id="about" class="about mb-n4 section">
+      <section class="about mb-n4 section">
         <div class="container" data-aos="fade-up" data-aos-delay="100">
           <div class="row gy-1 align-items-center">
             <div class="col-12" data-aos="fade-left" data-aos-delay="300">
@@ -1246,5 +1279,6 @@
     <script src="assets/js/blogs.js"></script>
     <script src="assets/js/services.js"></script>
     <script src="assets/js/projects.js"></script>
+    <script src="assets/js/navbar.js"></script>
   </body>
 </html>
