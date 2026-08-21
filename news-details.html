@@ -70,11 +70,9 @@
               ></a>
               <ul>
                 <li>
-                  <a href="service-details.html" class="active"
-                    >Detalhes do Serviço</a
-                  >
+                  <a href="service.html" class="active">Detalhes do Serviço</a>
                 </li>
-                <li><a href="project-details.html">Detalhes do Projeto</a></li>
+                <li><a href="project.html">Detalhes do Projeto</a></li>
                 <li><a href="news.html">Detalhes das Notícias</a></li>
               </ul>
             </li>
@@ -110,64 +108,63 @@
 
       <div class="container">
         <div class="row">
+          <!-- =========================================================
+    BLOG DETAILS
+    ========================================================== -->
+
           <div class="col-lg-8">
-            <!-- Blog Details Section -->
             <section id="blog-details" class="blog-details section">
               <div class="container" data-aos="fade-up">
                 <article class="article">
+                  <!-- IMAGEM PRINCIPAL -->
                   <div class="hero-img" data-aos="zoom-in">
                     <img
-                      src="assets/img/blog/blog-post-1.webp"
-                      alt="Featured blog image"
+                      id="blog-image"
+                      src=""
+                      alt=""
                       class="img-fluid"
                       loading="lazy"
                     />
+
                     <div class="meta-overlay">
                       <div class="meta-categories">
-                        <a href="#" class="category">Web Development</a>
+                        <a href="#" id="blog-category" class="category">
+                          Categoria
+                        </a>
+
                         <span class="divider">•</span>
-                        <span class="reading-time"
-                          ><i class="bi bi-clock"></i> 6 min read</span
-                        >
+
+                        <span class="reading-time">
+                          <i class="bi bi-clock"></i>
+
+                          <span id="blog-reading-time"> 0 min </span>
+                        </span>
                       </div>
                     </div>
                   </div>
 
+                  <!-- CONTEÚDO -->
                   <div
                     class="article-content"
                     data-aos="fade-up"
                     data-aos-delay="100"
                   >
                     <div class="content-header">
-                      <h1 class="title">
-                        Modern Web Development: Best Practices and Future Trends
-                        for 2025
-                      </h1>
+                      <h1 class="title" id="blog-title">Carregando...</h1>
                     </div>
 
-                    <div class="content">
-                      <p class="lead">
-                        The landscape of web development continues to evolve at
-                        an unprecedented pace, bringing new technologies,
-                        frameworks, and methodologies that reshape how we build
-                        modern web applications.
-                      </p>
-
-                      <p>
-                        As we delve into 2025, the web development ecosystem has
-                        transformed dramatically, introducing innovative
-                        approaches to building faster, more secure, and highly
-                        engaging web experiences. This comprehensive guide
-                        explores the latest trends and best practices that are
-                        defining the future of web development.
-                      </p>
-
+                    <div class="content" id="blog-content">
+                      <p>Carregando artigo...</p>
+                    </div>
                   </div>
                 </article>
               </div>
             </section>
-            <!-- /Blog Details Section -->
           </div>
+
+          <!-- =========================================================
+    SIDEBAR
+    ========================================================== -->
 
           <div class="col-lg-4 sidebar">
             <div
@@ -175,138 +172,69 @@
               data-aos="fade-up"
               data-aos-delay="200"
             >
-              <!-- Search Widget -->
+              <!-- =====================================================
+        SEARCH
+        ====================================================== -->
+
               <div class="search-widget widget-item">
-                <h3 class="widget-title">Search</h3>
-                <form action="">
-                  <input type="text" />
-                  <button type="submit" title="Search">
+                <h3 class="widget-title">Pesquisar</h3>
+
+                <form id="blog-search-form">
+                  <input
+                    type="text"
+                    id="blog-search"
+                    placeholder="Pesquisar..."
+                    autocomplete="off"
+                  />
+
+                  <button type="submit" title="Pesquisar">
                     <i class="bi bi-search"></i>
                   </button>
                 </form>
               </div>
-              <!--/Search Widget -->
 
+              <!-- =====================================================
+     Categories Widget
+====================================================== -->
 
-              <!-- Categories Widget -->
               <div class="categories-widget widget-item">
-                <h3 class="widget-title">Categories</h3>
-                <ul class="mt-3">
-                  <li>
-                    <a href="#">General <span>(25)</span></a>
-                  </li>
-                  <li>
-                    <a href="#">Lifestyle <span>(12)</span></a>
-                  </li>
-                  <li>
-                    <a href="#">Travel <span>(5)</span></a>
-                  </li>
-                  <li>
-                    <a href="#">Design <span>(22)</span></a>
-                  </li>
-                  <li>
-                    <a href="#">Creative <span>(8)</span></a>
-                  </li>
-                  <li>
-                    <a href="#">Educaion <span>(14)</span></a>
-                  </li>
-                </ul>
-              </div>
-              <!--/Categories Widget -->
+                <h3 class="widget-title">Categorias</h3>
 
-              <!-- Recent Posts Widget -->
+                <ul class="mt-3" id="blog-categories"></ul>
+              </div>
+
+              <!-- =====================================================
+     Recent Posts Widget
+====================================================== -->
+
               <div class="recent-posts-widget widget-item">
-                <h3 class="widget-title">Recent Posts</h3>
+                <h3 class="widget-title">Artigos Recentes</h3>
 
-                <div class="post-item">
-                  <img
-                    src="assets/img/blog/blog-post-5.webp"
-                    alt=""
-                    class="flex-shrink-0"
-                  />
-                  <div>
-                    <h4>
-                      <a href="blog-details.html"
-                        >Nihil blanditiis at in nihil autem</a
-                      >
-                    </h4>
-                    <time datetime="2020-01-01">Jan 1, 2020</time>
-                  </div>
-                </div>
-                <!-- End recent post item-->
+                <div id="recent-posts"></div>
 
-                <div class="post-item">
-                  <img
-                    src="assets/img/blog/blog-post-6.webp"
-                    alt=""
-                    class="flex-shrink-0"
-                  />
-                  <div>
-                    <h4>
-                      <a href="blog-details.html">Quidem autem et impedit</a>
-                    </h4>
-                    <time datetime="2020-01-01">Jan 1, 2020</time>
-                  </div>
-                </div>
-                <!-- End recent post item-->
+                <div
+                  class="recent-posts-pagination"
+                  id="recent-posts-pagination"
+                >
+                  <button type="button" id="recent-prev" class="pagination-btn">
+                    <i class="bi bi-arrow-left"></i>
+                    Anterior
+                  </button>
 
-                <div class="post-item">
-                  <img
-                    src="assets/img/blog/blog-post-2.webp"
-                    alt=""
-                    class="flex-shrink-0"
-                  />
-                  <div>
-                    <h4>
-                      <a href="blog-details.html"
-                        >Id quia et et ut maxime similique occaecati ut</a
-                      >
-                    </h4>
-                    <time datetime="2020-01-01">Jan 1, 2020</time>
-                  </div>
-                </div>
-                <!-- End recent post item-->
+                  <span id="recent-page" class="pagination-page"> 1 </span>
 
-                <div class="post-item">
-                  <img
-                    src="assets/img/blog/blog-post-6.webp"
-                    alt=""
-                    class="flex-shrink-0"
-                  />
-                  <div>
-                    <h4>
-                      <a href="blog-details.html"
-                        >Laborum corporis quo dara net para</a
-                      >
-                    </h4>
-                    <time datetime="2020-01-01">Jan 1, 2020</time>
-                  </div>
+                  <button type="button" id="recent-next" class="pagination-btn">
+                    Próximo
+                    <i class="bi bi-arrow-right"></i>
+                  </button>
                 </div>
-                <!-- End recent post item-->
-
-                <div class="post-item">
-                  <img
-                    src="assets/img/blog/blog-post-7.webp"
-                    alt=""
-                    class="flex-shrink-0"
-                  />
-                  <div>
-                    <h4>
-                      <a href="blog-details.html"
-                        >Et dolores corrupti quae illo quod dolor</a
-                      >
-                    </h4>
-                    <time datetime="2020-01-01">Jan 1, 2020</time>
-                  </div>
-                </div>
-                <!-- End recent post item-->
               </div>
-              <!--/Recent Posts Widget -->
             </div>
           </div>
         </div>
       </div>
     </main>
+
     <footer id="footer" class="turner-footer">
       <div class="container">
         <div class="footer-main">
@@ -391,6 +319,9 @@
 
     <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/blog-details.js"></script>
+
+    <script src="assets/js/blog-sidebar.js"></script>
 
     <script
       type="module"

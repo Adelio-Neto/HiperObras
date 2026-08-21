@@ -1,0 +1,169 @@
+{
+  "blogs": [
+    {
+      "id": 1,
+      "slug": "importancia-planejamento-construcao-civil",
+      "title": "A importância do planejamento na construção civil",
+      "image": "assets/img/blog/blog-post-1.webp",
+      "category": "Construção Civil",
+      "date": "2026-08-20",
+      "readingTime": "6 min",
+      "excerpt": "Um bom planejamento é fundamental para garantir qualidade, segurança, cumprimento de prazos e controle de custos em uma obra.",
+      "content": [
+        {
+          "type": "lead",
+          "text": "O planejamento é uma das etapas mais importantes para garantir o sucesso de qualquer projeto de construção civil."
+        },
+        {
+          "type": "paragraph",
+          "text": "Antes do início de uma obra é necessário analisar cuidadosamente os recursos disponíveis, os prazos, os materiais e as necessidades do projeto."
+        },
+        {
+          "type": "paragraph",
+          "text": "Um planejamento adequado permite reduzir desperdícios, antecipar problemas e garantir que cada etapa seja executada de forma organizada e segura."
+        },
+        {
+          "type": "heading",
+          "text": "Planejamento e controle de custos"
+        },
+        {
+          "type": "paragraph",
+          "text": "O controle financeiro deve acompanhar todas as fases da obra. Dessa forma, é possível identificar desvios e tomar decisões antes que eles comprometam o projeto."
+        }
+      ]
+    },
+
+    {
+      "id": 2,
+      "slug": "tecnologia-construcao-civil",
+      "title": "Como a tecnologia está transformando a construção civil",
+      "image": "assets/img/blog/blog-post-2.webp",
+      "category": "Inovação",
+      "date": "2026-08-17",
+      "readingTime": "5 min",
+      "excerpt": "Novas tecnologias estão tornando os projetos de construção mais eficientes, seguros e sustentáveis.",
+      "content": [
+        {
+          "type": "lead",
+          "text": "A transformação digital está mudando a forma como projetos de construção são planejados e executados."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ferramentas digitais permitem acompanhar projetos, controlar recursos e melhorar a comunicação entre as equipes."
+        },
+        {
+          "type": "paragraph",
+          "text": "A utilização de novas tecnologias também contribui para reduzir erros e aumentar a produtividade."
+        },
+        {
+          "type": "heading",
+          "text": "Tecnologia e produtividade"
+        },
+        {
+          "type": "paragraph",
+          "text": "Com processos cada vez mais digitalizados, as empresas conseguem tomar decisões mais rápidas e baseadas em informações concretas."
+        }
+      ]
+    },
+
+    {
+      "id": 3,
+      "slug": "construcao-sustentavel-angola",
+      "title": "Construção sustentável e o futuro das nossas cidades",
+      "image": "assets/img/blog/blog-post-5.webp",
+      "category": "Sustentabilidade",
+      "date": "2026-08-14",
+      "readingTime": "7 min",
+      "excerpt": "A construção sustentável procura equilibrar desenvolvimento, eficiência e responsabilidade ambiental.",
+      "content": [
+        {
+          "type": "lead",
+          "text": "Construir de forma sustentável é cada vez mais importante para o desenvolvimento das cidades."
+        },
+        {
+          "type": "paragraph",
+          "text": "A escolha adequada dos materiais e a utilização eficiente dos recursos podem reduzir significativamente o impacto ambiental de uma obra."
+        },
+        {
+          "type": "paragraph",
+          "text": "Além dos benefícios ambientais, soluções sustentáveis podem proporcionar economia e maior conforto aos utilizadores."
+        }
+      ]
+    },
+
+    {
+      "id": 4,
+      "slug": "seguranca-obras-construcao",
+      "title": "Segurança no trabalho: uma prioridade em todas as obras",
+      "image": "assets/img/blog/blog-post-6.webp",
+      "category": "Segurança",
+      "date": "2026-08-10",
+      "readingTime": "5 min",
+      "excerpt": "A segurança deve estar presente em todas as etapas de um projeto de construção.",
+      "content": [
+        {
+          "type": "lead",
+          "text": "A segurança dos trabalhadores deve ser uma prioridade desde o planejamento até à conclusão da obra."
+        },
+        {
+          "type": "paragraph",
+          "text": "Equipamentos adequados, formação e acompanhamento são fundamentais para reduzir riscos no ambiente de trabalho."
+        },
+        {
+          "type": "heading",
+          "text": "Prevenção de acidentes"
+        },
+        {
+          "type": "paragraph",
+          "text": "A identificação antecipada dos riscos permite implementar medidas preventivas e criar ambientes de trabalho mais seguros."
+        }
+      ]
+    },
+
+    {
+      "id": 5,
+      "slug": "gestao-eficiente-projetos",
+      "title": "Como melhorar a gestão de projetos de construção",
+      "image": "assets/img/blog/blog-post-7.webp",
+      "category": "Gestão",
+      "date": "2026-08-05",
+      "readingTime": "6 min",
+      "excerpt": "Uma gestão eficiente ajuda a controlar prazos, custos, recursos e qualidade durante toda a execução.",
+      "content": [
+        {
+          "type": "lead",
+          "text": "Uma boa gestão é essencial para garantir que um projeto seja concluído dentro dos prazos e custos previstos."
+        },
+        {
+          "type": "paragraph",
+          "text": "O acompanhamento contínuo das equipes, materiais e cronogramas permite identificar problemas antes que eles afetem o resultado final."
+        },
+        {
+          "type": "paragraph",
+          "text": "A comunicação entre todos os envolvidos também desempenha um papel fundamental no sucesso do projeto."
+        }
+      ]
+    },
+
+    {
+      "id": 6,
+      "slug": "arquitetura-moderna-funcional",
+      "title": "Arquitetura moderna: estética e funcionalidade",
+      "image": "assets/img/blog/blog-post-2.webp",
+      "category": "Arquitetura",
+      "date": "2026-07-28",
+      "readingTime": "4 min",
+      "excerpt": "Projetos modernos procuram combinar estética, conforto, funcionalidade e eficiência.",
+      "content": [
+        {
+          "type": "lead",
+          "text": "A arquitetura moderna procura criar espaços que sejam visualmente agradáveis e ao mesmo tempo funcionais."
+        },
+        {
+          "type": "paragraph",
+          "text": "A integração entre iluminação, materiais, circulação e utilização dos espaços é fundamental para alcançar bons resultados."
+        }
+      ]
+    }
+  ]
+}

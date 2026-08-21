@@ -1,0 +1,573 @@
+{
+  "services": [
+    {
+      "id": 1,
+      "slug": "construcao-residencial",
+      "number": "01",
+      "name": "Construção Residencial",
+      "category": "CONSTRUÇÃO CIVIL",
+      "shortDescription": "Casas, apartamentos e condomínios com design moderno, materiais de qualidade e soluções pensadas para cada necessidade.",
+      "icon": "bi-house-door-fill",
+      "mainImage": "assets/img/construction/showcase-7.webp",
+
+      "overview": {
+        "title": "Construção Residencial",
+        "description": "Projetamos e construímos propriedades residenciais que combinam arquitetura moderna, funcionalidade, segurança e qualidade. Atuamos desde casas unifamiliares até projetos residenciais de maior dimensão, acompanhando todas as etapas da obra.",
+        "ctaText": "Solicitar Orçamento Gratuito"
+      },
+
+      "benefits": [
+        "Projetos personalizados de acordo com as necessidades do cliente",
+        "Materiais de qualidade e acabamentos cuidadosamente selecionados",
+        "Acompanhamento técnico durante todas as etapas da obra",
+        "Planeamento e controlo dos custos do projeto",
+        "Cumprimento dos prazos definidos para a execução",
+        "Foco na segurança, durabilidade e qualidade da construção"
+      ],
+
+      "gallery": [
+        {
+          "image": "assets/img/construction/project-1.webp",
+          "alt": "Projeto de construção residencial"
+        },
+        {
+          "image": "assets/img/construction/project-9.webp",
+          "alt": "Obra residencial HiperObras"
+        },
+        {
+          "image": "assets/img/construction/project-6.webp",
+          "alt": "Projeto residencial HiperObras"
+        }
+      ],
+
+      "details": {
+        "title": "Construindo a Sua Casa dos Sonhos",
+        "paragraphs": [
+          "O nosso serviço de construção residencial abrange todas as etapas necessárias para transformar uma ideia em uma propriedade pronta para habitar. Trabalhamos desde o conceito inicial e desenvolvimento do projeto até à execução, acabamentos e entrega final.",
+          "A nossa equipa acompanha cada fase do projeto com atenção à qualidade, segurança e cumprimento dos requisitos definidos pelo cliente. Procuramos criar espaços funcionais, modernos e preparados para oferecer conforto e durabilidade."
+        ]
+      },
+
+      "features": [
+        {
+          "icon": "bi-pencil-square",
+          "title": "Design Personalizado",
+          "description": "Desenvolvimento de soluções arquitetónicas personalizadas de acordo com o estilo de vida, necessidades e orçamento do cliente."
+        },
+        {
+          "icon": "bi-shield-check",
+          "title": "Engenharia Estrutural",
+          "description": "Soluções estruturais pensadas para garantir segurança, resistência, durabilidade e qualidade em cada etapa da construção."
+        },
+        {
+          "icon": "bi-lightning-charge",
+          "title": "Eficiência Energética",
+          "description": "Aplicação de soluções que ajudam a melhorar o conforto e reduzir o consumo energético da propriedade."
+        },
+        {
+          "icon": "bi-palette",
+          "title": "Acabamentos Interiores",
+          "description": "Execução de acabamentos interiores com atenção aos detalhes, incluindo pavimentos, revestimentos, carpintaria e outros elementos."
+        }
+      ],
+
+      "process": [
+        {
+          "number": "01",
+          "title": "Consulta e Planeamento",
+          "description": "Reunimo-nos com o cliente para compreender a sua visão, analisar as necessidades do projeto, avaliar o local e definir o âmbito inicial da obra."
+        },
+        {
+          "number": "02",
+          "title": "Design e Licenciamento",
+          "description": "Desenvolvemos os projetos necessários e orientamos o processo de preparação da documentação e licenciamento aplicável."
+        },
+        {
+          "number": "03",
+          "title": "Construção",
+          "description": "As nossas equipas executam a obra seguindo o planeamento definido, com acompanhamento técnico e controlo da qualidade."
+        },
+        {
+          "number": "04",
+          "title": "Inspeção e Entrega",
+          "description": "Realizamos a verificação final dos trabalhos, corrigimos eventuais pendências e procedemos à entrega do projeto ao cliente."
+        }
+      ]
+    },
+
+    {
+      "id": 2,
+      "slug": "obras-comerciais",
+      "number": "02",
+      "name": "Obras Comerciais",
+      "category": "CONSTRUÇÃO CIVIL",
+      "shortDescription": "Construção e execução de espaços comerciais funcionais, modernos e preparados para responder às necessidades de cada negócio.",
+      "icon": "bi-building",
+      "mainImage": "assets/img/construction/showcase-8.webp",
+
+      "overview": {
+        "title": "Obras Comerciais",
+        "description": "Executamos obras comerciais para empresas, lojas, escritórios, restaurantes e outros espaços destinados a atividades empresariais.",
+        "ctaText": "Solicitar Orçamento Gratuito"
+      },
+
+      "benefits": [
+        "Projetos adaptados à identidade do negócio",
+        "Planeamento adequado às necessidades comerciais",
+        "Gestão eficiente dos recursos e materiais",
+        "Acompanhamento técnico da obra",
+        "Execução com atenção aos prazos",
+        "Soluções funcionais e duradouras"
+      ],
+
+      "gallery": [
+        {
+          "image": "assets/img/construction/project-2.webp",
+          "alt": "Obra comercial"
+        },
+        {
+          "image": "assets/img/construction/project-4.webp",
+          "alt": "Espaço comercial"
+        },
+        {
+          "image": "assets/img/construction/project-7.webp",
+          "alt": "Projeto comercial"
+        }
+      ],
+
+      "details": {
+        "title": "Espaços Comerciais Pensados para o Seu Negócio",
+        "paragraphs": [
+          "Desenvolvemos e executamos obras comerciais com foco na funcionalidade, circulação, apresentação e necessidades específicas de cada negócio.",
+          "Desde pequenos estabelecimentos até espaços comerciais de maior dimensão, acompanhamos o projeto de forma integrada para garantir uma execução organizada e de qualidade."
+        ]
+      },
+
+      "features": [
+        {
+          "icon": "bi-building",
+          "title": "Espaços Funcionais",
+          "description": "Planeamento de ambientes comerciais que aproveitam melhor o espaço e facilitam a operação diária do negócio."
+        },
+        {
+          "icon": "bi-rulers",
+          "title": "Planeamento Técnico",
+          "description": "Soluções técnicas adequadas às características e exigências de cada projeto comercial."
+        },
+        {
+          "icon": "bi-briefcase",
+          "title": "Foco no Negócio",
+          "description": "Projetos pensados para criar ambientes profissionais, funcionais e alinhados com a identidade da empresa."
+        },
+        {
+          "icon": "bi-check2-square",
+          "title": "Controlo de Qualidade",
+          "description": "Acompanhamento das diferentes fases da execução para garantir qualidade e conformidade."
+        }
+      ],
+
+      "process": [
+        {
+          "number": "01",
+          "title": "Análise das Necessidades",
+          "description": "Identificamos as necessidades do negócio, características do espaço e objetivos do projeto."
+        },
+        {
+          "number": "02",
+          "title": "Planeamento",
+          "description": "Definimos o projeto, materiais, etapas de execução e principais requisitos da obra."
+        },
+        {
+          "number": "03",
+          "title": "Execução da Obra",
+          "description": "Executamos os trabalhos de acordo com o planeamento e as especificações definidas."
+        },
+        {
+          "number": "04",
+          "title": "Finalização e Entrega",
+          "description": "Realizamos os acabamentos, inspeções finais e entrega do espaço preparado para utilização."
+        }
+      ]
+    },
+
+    {
+      "id": 3,
+      "slug": "reformas-restauracoes",
+      "number": "03",
+      "name": "Reformas e Restaurações",
+      "category": "REFORMAS",
+      "shortDescription": "Renovação e recuperação de imóveis, ambientes e estruturas, preservando características importantes e modernizando os espaços.",
+      "icon": "bi-tools",
+      "mainImage": "assets/img/construction/showcase-9.webp",
+
+      "overview": {
+        "title": "Reformas e Restaurações",
+        "description": "Transformamos espaços existentes através de reformas, remodelações e restaurações, procurando melhorar a funcionalidade, estética e conservação do imóvel.",
+        "ctaText": "Solicitar Orçamento Gratuito"
+      },
+
+      "benefits": [
+        "Avaliação das condições existentes",
+        "Soluções personalizadas para cada ambiente",
+        "Modernização de espaços antigos",
+        "Melhoria da funcionalidade dos ambientes",
+        "Seleção adequada de materiais",
+        "Acompanhamento de todas as etapas da reforma"
+      ],
+
+      "gallery": [
+        {
+          "image": "assets/img/construction/project-3.webp",
+          "alt": "Reforma de imóvel"
+        },
+        {
+          "image": "assets/img/construction/project-5.webp",
+          "alt": "Restauração de espaço"
+        },
+        {
+          "image": "assets/img/construction/project-8.webp",
+          "alt": "Projeto de reforma"
+        }
+      ],
+
+      "details": {
+        "title": "Renovamos Espaços para uma Nova Realidade",
+        "paragraphs": [
+          "Realizamos reformas e restaurações para transformar imóveis existentes, melhorar os ambientes e prolongar a vida útil das estruturas.",
+          "Analisamos as condições do espaço antes de definir as soluções de intervenção, procurando equilibrar estética, funcionalidade, qualidade e orçamento."
+        ]
+      },
+
+      "features": [
+        {
+          "icon": "bi-house-gear",
+          "title": "Remodelação de Ambientes",
+          "description": "Transformação de espaços existentes para melhorar a organização, circulação e funcionalidade."
+        },
+        {
+          "icon": "bi-tools",
+          "title": "Reparação e Recuperação",
+          "description": "Intervenção em elementos danificados ou degradados para recuperar as condições do imóvel."
+        },
+        {
+          "icon": "bi-paint-bucket",
+          "title": "Acabamentos",
+          "description": "Aplicação de novos revestimentos, pinturas e outros acabamentos para renovar os ambientes."
+        },
+        {
+          "icon": "bi-arrow-repeat",
+          "title": "Modernização",
+          "description": "Atualização de espaços antigos através de soluções modernas e adequadas às necessidades atuais."
+        }
+      ],
+
+      "process": [
+        {
+          "number": "01",
+          "title": "Avaliação do Espaço",
+          "description": "Analisamos o imóvel, identificamos problemas e compreendemos os objetivos da reforma."
+        },
+        {
+          "number": "02",
+          "title": "Projeto e Orçamento",
+          "description": "Definimos as soluções, materiais, etapas e estimativa dos trabalhos necessários."
+        },
+        {
+          "number": "03",
+          "title": "Execução",
+          "description": "Realizamos os trabalhos de reforma ou restauração de acordo com o projeto aprovado."
+        },
+        {
+          "number": "04",
+          "title": "Entrega",
+          "description": "Efetuamos a inspeção final e entregamos o espaço renovado ao cliente."
+        }
+      ]
+    },
+
+    {
+      "id": 4,
+      "slug": "infraestrutura-urbanismo",
+      "number": "04",
+      "name": "Infraestrutura e Urbanismo",
+      "category": "INFRAESTRUTURA",
+      "shortDescription": "Soluções para infraestrutura urbana, arruamentos, pavimentação, drenagem e desenvolvimento de espaços exteriores.",
+      "icon": "bi-cone-striped",
+      "mainImage": "assets/img/construction/showcase-10.webp",
+
+      "overview": {
+        "title": "Infraestrutura e Urbanismo",
+        "description": "Executamos projetos de infraestrutura e urbanismo destinados a melhorar a mobilidade, organização e funcionalidade dos espaços urbanos.",
+        "ctaText": "Solicitar Orçamento Gratuito"
+      },
+
+      "benefits": [
+        "Planeamento de infraestrutura",
+        "Execução de pavimentação",
+        "Sistemas de drenagem",
+        "Arruamentos e acessos",
+        "Preparação e organização de terrenos",
+        "Acompanhamento técnico das obras"
+      ],
+
+      "gallery": [
+        {
+          "image": "assets/img/construction/project-10.webp",
+          "alt": "Projeto de infraestrutura"
+        },
+        {
+          "image": "assets/img/construction/project-11.webp",
+          "alt": "Obra de urbanismo"
+        },
+        {
+          "image": "assets/img/construction/project-12.webp",
+          "alt": "Infraestrutura urbana"
+        }
+      ],
+
+      "details": {
+        "title": "Infraestrutura para Desenvolver Espaços Melhores",
+        "paragraphs": [
+          "Atuamos na execução de projetos de infraestrutura e urbanismo destinados a criar espaços mais funcionais, acessíveis e preparados para as necessidades das comunidades.",
+          "Os trabalhos podem envolver preparação de terrenos, pavimentação, drenagem, arruamentos, acessos e outras soluções de infraestrutura."
+        ]
+      },
+
+      "features": [
+        {
+          "icon": "bi-signpost-2",
+          "title": "Arruamentos",
+          "description": "Execução e melhoria de vias e acessos para facilitar a circulação e mobilidade."
+        },
+        {
+          "icon": "bi-grid-3x3-gap",
+          "title": "Pavimentação",
+          "description": "Soluções de pavimentação adequadas às características e utilização de cada espaço."
+        },
+        {
+          "icon": "bi-water",
+          "title": "Drenagem",
+          "description": "Implementação de soluções para gestão e encaminhamento adequado das águas."
+        },
+        {
+          "icon": "bi-geo-alt",
+          "title": "Urbanização",
+          "description": "Desenvolvimento e organização de espaços exteriores para diferentes finalidades."
+        }
+      ],
+
+      "process": [
+        {
+          "number": "01",
+          "title": "Estudo do Local",
+          "description": "Analisamos as características do terreno, acessos e necessidades de infraestrutura."
+        },
+        {
+          "number": "02",
+          "title": "Planeamento Técnico",
+          "description": "Definimos as soluções técnicas, materiais e etapas necessárias para a execução."
+        },
+        {
+          "number": "03",
+          "title": "Execução",
+          "description": "Realizamos os trabalhos de infraestrutura seguindo o planeamento estabelecido."
+        },
+        {
+          "number": "04",
+          "title": "Verificação e Entrega",
+          "description": "Verificamos a qualidade dos trabalhos e concluímos a entrega do projeto."
+        }
+      ]
+    },
+
+    {
+      "id": 5,
+      "slug": "gerenciamento-obras",
+      "number": "05",
+      "name": "Gerenciamento de Obras",
+      "category": "GESTÃO DE OBRAS",
+      "shortDescription": "Planeamento, coordenação e acompanhamento de obras para garantir maior controlo sobre custos, prazos e qualidade.",
+      "icon": "bi-clipboard-check",
+      "mainImage": "assets/img/construction/showcase-11.webp",
+
+      "overview": {
+        "title": "Gerenciamento de Obras",
+        "description": "Coordenamos as diferentes etapas da obra, acompanhando equipas, materiais, prazos, custos e qualidade para proporcionar maior controlo ao cliente.",
+        "ctaText": "Solicitar Orçamento Gratuito"
+      },
+
+      "benefits": [
+        "Planeamento detalhado da obra",
+        "Acompanhamento de prazos",
+        "Controlo de custos",
+        "Coordenação das equipas",
+        "Acompanhamento de materiais",
+        "Controlo da qualidade dos trabalhos"
+      ],
+
+      "gallery": [
+        {
+          "image": "assets/img/construction/project-13.webp",
+          "alt": "Gerenciamento de obra"
+        },
+        {
+          "image": "assets/img/construction/project-14.webp",
+          "alt": "Acompanhamento de construção"
+        },
+        {
+          "image": "assets/img/construction/project-15.webp",
+          "alt": "Gestão de projeto"
+        }
+      ],
+
+      "details": {
+        "title": "Mais Controlo e Organização em Cada Etapa",
+        "paragraphs": [
+          "O gerenciamento de obras permite acompanhar de forma organizada todas as etapas do projeto, desde o planeamento inicial até à conclusão dos trabalhos.",
+          "Coordenamos equipas, fornecedores, materiais, cronogramas e atividades para ajudar a garantir que a obra avance de forma organizada e de acordo com os objetivos definidos."
+        ]
+      },
+
+      "features": [
+        {
+          "icon": "bi-calendar-check",
+          "title": "Planeamento",
+          "description": "Organização das etapas da obra e definição das principais atividades e prazos."
+        },
+        {
+          "icon": "bi-cash-stack",
+          "title": "Controlo de Custos",
+          "description": "Acompanhamento dos custos e recursos utilizados durante a execução do projeto."
+        },
+        {
+          "icon": "bi-people",
+          "title": "Coordenação de Equipas",
+          "description": "Coordenação das equipas envolvidas para manter o fluxo de trabalho organizado."
+        },
+        {
+          "icon": "bi-clipboard-check",
+          "title": "Controlo de Qualidade",
+          "description": "Acompanhamento dos trabalhos para verificar a qualidade e conformidade da execução."
+        }
+      ],
+
+      "process": [
+        {
+          "number": "01",
+          "title": "Planeamento",
+          "description": "Definimos o cronograma, recursos, equipas e principais etapas da obra."
+        },
+        {
+          "number": "02",
+          "title": "Coordenação",
+          "description": "Coordenamos as diferentes equipas, fornecedores e atividades envolvidas."
+        },
+        {
+          "number": "03",
+          "title": "Acompanhamento",
+          "description": "Monitorizamos o progresso da obra, custos, prazos e qualidade dos trabalhos."
+        },
+        {
+          "number": "04",
+          "title": "Conclusão",
+          "description": "Realizamos a verificação final e acompanhamos a conclusão e entrega da obra."
+        }
+      ]
+    },
+
+    {
+      "id": 6,
+      "slug": "arquitetura-design",
+      "number": "06",
+      "name": "Arquitetura e Design",
+      "category": "ARQUITETURA",
+      "shortDescription": "Projetos arquitetónicos e soluções de design que unem estética, funcionalidade e identidade em cada espaço.",
+      "icon": "bi-pencil-ruler",
+      "mainImage": "assets/img/construction/showcase-12.webp",
+
+      "overview": {
+        "title": "Arquitetura e Design",
+        "description": "Desenvolvemos projetos arquitetónicos e soluções de design pensados para criar espaços funcionais, modernos e visualmente equilibrados.",
+        "ctaText": "Solicitar Orçamento Gratuito"
+      },
+
+      "benefits": [
+        "Projetos arquitetónicos personalizados",
+        "Estudos de distribuição dos espaços",
+        "Soluções de design de interiores",
+        "Escolha e combinação de materiais",
+        "Visualização das soluções propostas",
+        "Acompanhamento técnico do projeto"
+      ],
+
+      "gallery": [
+        {
+          "image": "assets/img/construction/project-16.webp",
+          "alt": "Projeto de arquitetura"
+        },
+        {
+          "image": "assets/img/construction/project-17.webp",
+          "alt": "Design de interiores"
+        },
+        {
+          "image": "assets/img/construction/project-18.webp",
+          "alt": "Projeto arquitetónico"
+        }
+      ],
+
+      "details": {
+        "title": "Projetamos Espaços com Identidade",
+        "paragraphs": [
+          "Criamos projetos arquitetónicos que procuram equilibrar estética, funcionalidade e necessidades específicas de cada cliente.",
+          "Desde a conceção inicial até ao desenvolvimento das soluções de espaço, materiais e acabamentos, trabalhamos para transformar ideias em projetos concretos."
+        ]
+      },
+
+      "features": [
+        {
+          "icon": "bi-pencil-square",
+          "title": "Projetos Arquitetónicos",
+          "description": "Desenvolvimento de projetos adaptados às características do terreno, necessidades e objetivos do cliente."
+        },
+        {
+          "icon": "bi-layout-text-window",
+          "title": "Design de Espaços",
+          "description": "Organização e composição dos ambientes para criar espaços equilibrados, funcionais e confortáveis."
+        },
+        {
+          "icon": "bi-palette",
+          "title": "Materiais e Acabamentos",
+          "description": "Definição de materiais, revestimentos, cores e acabamentos de acordo com o conceito do projeto."
+        },
+        {
+          "icon": "bi-eye",
+          "title": "Conceção Visual",
+          "description": "Apresentação das soluções de design para facilitar a compreensão do resultado pretendido."
+        }
+      ],
+
+      "process": [
+        {
+          "number": "01",
+          "title": "Briefing",
+          "description": "Compreendemos as necessidades, preferências e objetivos do cliente."
+        },
+        {
+          "number": "02",
+          "title": "Conceito",
+          "description": "Desenvolvemos o conceito arquitetónico e as primeiras soluções para o espaço."
+        },
+        {
+          "number": "03",
+          "title": "Desenvolvimento",
+          "description": "Aprofundamos o projeto, definindo os elementos técnicos, materiais e acabamentos."
+        },
+        {
+          "number": "04",
+          "title": "Entrega do Projeto",
+          "description": "Finalizamos a documentação e apresentamos o projeto desenvolvido ao cliente."
+        }
+      ]
+    }
+  ]
+}

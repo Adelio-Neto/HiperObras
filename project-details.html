@@ -70,14 +70,12 @@
               ></a>
               <ul>
                 <li>
-                  <a href="service-details.html">Detalhes do Serviço</a>
+                  <a href="service.html">Detalhes do Serviço</a>
                 </li>
                 <li>
-                  <a href="project-details.html" class="active"
-                    >Detalhes do Projeto</a
-                  >
+                  <a href="project.html" class="active">Detalhes do Projeto</a>
                 </li>
-                <li><a href="news-details.html">Detalhes das Notícias</a></li>
+                <li><a href="news.html">Detalhes das Notícias</a></li>
               </ul>
             </li>
             <li><a href="#contact">Contacto</a></li>
@@ -115,108 +113,69 @@
         <div class="container" data-aos="fade-up" data-aos-delay="100">
           <div class="row gy-5">
             <div class="col-lg-8">
+              <!-- HERO -->
               <div class="hero-banner" data-aos="zoom-in">
-                <div class="banner-slider swiper init-swiper">
-                  <script type="application/json" class="swiper-config">
-                    {
-                      "loop": true,
-                      "speed": 700,
-                      "autoplay": {
-                        "delay": 4500
-                      },
-                      "effect": "slide",
-                      "slidesPerView": 1,
-                      "pagination": {
-                        "el": ".swiper-pagination",
-                        "type": "fraction"
-                      },
-                      "navigation": {
-                        "nextEl": ".swiper-button-next",
-                        "prevEl": ".swiper-button-prev"
-                      }
-                    }
-                  </script>
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <img
-                        src="assets/img/construction/project-6.webp"
-                        alt="Torre Empresarial Luanda"
-                        class="img-fluid"
-                        loading="lazy"
-                      />
-                    </div>
-                    <div class="swiper-slide">
-                      <img
-                        src="assets/img/construction/project-1.webp"
-                        alt="Vista Interna do Projeto"
-                        class="img-fluid"
-                        loading="lazy"
-                      />
-                    </div>
-                    <div class="swiper-slide">
-                      <img
-                        src="assets/img/construction/project-12.webp"
-                        alt="Detalhes da Obra em Angola"
-                        class="img-fluid"
-                        loading="lazy"
-                      />
-                    </div>
+                <div class="banner-slider swiper">
+                  <div class="swiper-wrapper" id="projectHeroGallery">
+                    <!-- JS -->
                   </div>
+
                   <div class="slider-controls">
                     <div class="swiper-button-prev"></div>
+
                     <div class="swiper-pagination"></div>
+
                     <div class="swiper-button-next"></div>
                   </div>
                 </div>
-                <!-- End Banner Slider -->
 
                 <div class="banner-overlay">
-                  <span class="tag">Comercial</span>
-                  <h2>Torre Empresarial Luanda</h2>
+                  <span class="tag" id="projectCategory"> — </span>
+
+                  <h2 id="projectTitle">Carregando...</h2>
                 </div>
               </div>
-              <!-- End Hero Banner -->
 
+              <!-- TABS -->
               <div
                 class="detail-tabs mt-4"
                 data-aos="fade-up"
                 data-aos-delay="200"
               >
-                <ul class="nav nav-tabs" role="tablist">
-                  <li class="nav-item" role="presentation">
+                <ul class="nav nav-tabs">
+                  <li class="nav-item">
                     <button
                       class="nav-link active"
                       data-bs-toggle="tab"
                       data-bs-target="#project-details-tab-1"
                       type="button"
-                      role="tab"
-                      aria-selected="true"
                     >
-                      <i class="bi bi-info-circle"></i> Visão Geral
+                      <i class="bi bi-info-circle"></i>
+                      Visão Geral
                     </button>
                   </li>
-                  <li class="nav-item" role="presentation">
+
+                  <li class="nav-item">
                     <button
                       class="nav-link"
                       data-bs-toggle="tab"
                       data-bs-target="#project-details-tab-2"
                       type="button"
-                      role="tab"
-                      aria-selected="false"
                     >
-                      <i class="bi bi-exclamation-triangle"></i> Desafios
+                      <i class="bi bi-exclamation-triangle"></i>
+                      Desafios
                     </button>
                   </li>
-                  <li class="nav-item" role="presentation">
+
+                  <li class="nav-item">
                     <button
                       class="nav-link"
                       data-bs-toggle="tab"
                       data-bs-target="#project-details-tab-3"
                       type="button"
-                      role="tab"
-                      aria-selected="false"
                     >
-                      <i class="bi bi-gear"></i> Metodologia
+                      <i class="bi bi-gear"></i>
+                      Metodologia
                     </button>
                   </li>
                 </ul>
@@ -225,351 +184,164 @@
                   <div
                     class="tab-pane fade show active"
                     id="project-details-tab-1"
-                    role="tabpanel"
                   >
-                    <p class="summary">
-                      Um empreendimento comercial de referência em Luanda, que
-                      combina arquitetura moderna com técnicas construtivas
-                      sustentáveis, desenvolvido para empresas angolanas e
-                      internacionais.
-                    </p>
-                    <p>
-                      A Torre Empresarial Luanda ocupa 28 andares numa área de 2
-                      hectares no coração da capital angolana. Com fachadas
-                      envidraçadas, espaços colaborativos e tecnologia de ponta,
-                      a estrutura foi concluída em 20 meses. Cada fase seguiu
-                      rigorosos padrões de sustentabilidade e normas de
-                      segurança internacionais, adaptadas à realidade angolana.
-                    </p>
+                    <div id="projectOverview">
+                      <!-- JS -->
+                    </div>
                   </div>
-                  <!-- End Tab 1 -->
 
-                  <div
-                    class="tab-pane fade"
-                    id="project-details-tab-2"
-                    role="tabpanel"
-                  >
-                    <p>
-                      A coordenação da construção no centro de Luanda apresentou
-                      desafios logísticos significativos, incluindo o tráfego
-                      intenso na Avenida 4 de Fevereiro, áreas de estocagem
-                      limitadas e a necessidade de manter o acesso de pedestres
-                      durante a obra. Além disso, a integração de fundações
-                      profundas devido ao solo característico da região exigiu
-                      soluções de engenharia inovadoras e o uso de materiais
-                      importados de alta qualidade.
+                  <div class="tab-pane fade" id="project-details-tab-2">
+                    <p id="projectChallenges">
+                      <!-- JS -->
                     </p>
                   </div>
-                  <!-- End Tab 2 -->
 
-                  <div
-                    class="tab-pane fade"
-                    id="project-details-tab-3"
-                    role="tabpanel"
-                  >
-                    <p>
-                      Implementámos uma estratégia de construção modular com
-                      recurso a modelagem 3D em tempo real e inspeções com
-                      drones. Estruturas de aço pré-fabricadas, importadas com
-                      logística otimizada, aceleraram o progresso vertical. O
-                      sistema de fachada adaptável garante eficiência térmica,
-                      fundamental para o clima tropical de Luanda. Foram
-                      instalados painéis solares no topo do edifício, reduzindo
-                      a pegada de carbono do projeto em 35% em comparação com
-                      construções convencionais.
+                  <div class="tab-pane fade" id="project-details-tab-3">
+                    <p id="projectMethodology">
+                      <!-- JS -->
                     </p>
                   </div>
-                  <!-- End Tab 3 -->
                 </div>
               </div>
-              <!-- End Detail Tabs -->
 
+              <!-- GALERIA -->
               <div
                 class="photo-grid mt-4"
                 data-aos="fade-up"
                 data-aos-delay="300"
               >
                 <h4>Galeria de Imagens</h4>
-                <div class="row g-3">
-                  <div class="col-4">
-                    <a
-                      href="assets/img/construction/project-10.webp"
-                      class="glightbox"
-                      data-gallery="detail-gallery"
-                    >
-                      <img
-                        src="assets/img/construction/project-10.webp"
-                        alt="Fachada do Edifício"
-                        class="img-fluid"
-                        loading="lazy"
-                      />
-                    </a>
-                  </div>
-                  <div class="col-4">
-                    <a
-                      href="assets/img/construction/project-9.webp"
-                      class="glightbox"
-                      data-gallery="detail-gallery"
-                    >
-                      <img
-                        src="assets/img/construction/project-9.webp"
-                        alt="Interior Moderno"
-                        class="img-fluid"
-                        loading="lazy"
-                      />
-                    </a>
-                  </div>
-                  <div class="col-4">
-                    <a
-                      href="assets/img/construction/project-3.webp"
-                      class="glightbox"
-                      data-gallery="detail-gallery"
-                    >
-                      <img
-                        src="assets/img/construction/project-3.webp"
-                        alt="Detalhes Estruturais"
-                        class="img-fluid"
-                        loading="lazy"
-                      />
-                    </a>
-                  </div>
-                  <div class="col-4">
-                    <a
-                      href="assets/img/construction/project-12.webp"
-                      class="glightbox"
-                      data-gallery="detail-gallery"
-                    >
-                      <img
-                        src="assets/img/construction/project-12.webp"
-                        alt="Áreas Comuns"
-                        class="img-fluid"
-                        loading="lazy"
-                      />
-                    </a>
-                  </div>
-                  <div class="col-4">
-                    <a
-                      href="assets/img/construction/project-1.webp"
-                      class="glightbox"
-                      data-gallery="detail-gallery"
-                    >
-                      <img
-                        src="assets/img/construction/project-1.webp"
-                        alt="Vista Panorâmica de Luanda"
-                        class="img-fluid"
-                        loading="lazy"
-                      />
-                    </a>
-                  </div>
-                  <div class="col-4">
-                    <a
-                      href="assets/img/construction/project-6.webp"
-                      class="glightbox"
-                      data-gallery="detail-gallery"
-                    >
-                      <img
-                        src="assets/img/construction/project-6.webp"
-                        alt="Projeto Concluído"
-                        class="img-fluid"
-                        loading="lazy"
-                      />
-                    </a>
-                  </div>
+
+                <div class="row g-3" id="projectGallery">
+                  <!-- JS -->
                 </div>
               </div>
-              <!-- End Photo Grid -->
             </div>
 
+            <!-- SIDEBAR -->
             <div class="col-lg-4">
               <div class="sticky-sidebar">
+                <!-- META -->
                 <div
                   class="meta-header"
                   data-aos="fade-left"
                   data-aos-delay="150"
                 >
                   <div class="status-badge">
-                    <i class="bi bi-check-lg"></i> Concluído
+                    <i class="bi bi-check-lg"></i>
+
+                    <span id="projectStatus"> — </span>
                   </div>
+
                   <div class="meta-row">
                     <i class="bi bi-calendar-event"></i>
-                    <span>Dezembro de 2025</span>
+
+                    <span id="projectDate"> — </span>
                   </div>
+
                   <div class="meta-row">
                     <i class="bi bi-pin-map"></i>
-                    <span>Luanda, Angola</span>
+
+                    <span id="projectLocation"> — </span>
                   </div>
+
                   <div class="meta-row">
                     <i class="bi bi-people"></i>
-                    <span>HiperObras Angola</span>
+
+                    <span id="projectCompany"> — </span>
                   </div>
                 </div>
-                <!-- End Meta Header -->
 
+                <!-- ESPECIFICAÇÕES -->
                 <div
                   class="specs-card"
                   data-aos="fade-left"
                   data-aos-delay="200"
                 >
                   <h4>Especificações do Projeto</h4>
-                  <div class="spec-row">
-                    <div class="spec-item">
-                      <span class="spec-number">28</span>
-                      <span class="spec-label">Andares</span>
-                    </div>
-                    <div class="spec-item">
-                      <span class="spec-number">20</span>
-                      <span class="spec-label">Meses</span>
-                    </div>
-                  </div>
-                  <div class="spec-row">
-                    <div class="spec-item">
-                      <span class="spec-number">Kz 85M</span>
-                      <span class="spec-label">Orçamento</span>
-                    </div>
-                    <div class="spec-item">
-                      <span class="spec-number">2</span>
-                      <span class="spec-label">Hectares</span>
-                    </div>
+
+                  <div id="projectSpecifications">
+                    <!-- JS -->
                   </div>
                 </div>
-                <!-- End Specs Card -->
 
+                <!-- SERVIÇOS -->
                 <div
                   class="capabilities-card"
                   data-aos="fade-left"
                   data-aos-delay="250"
                 >
                   <h4>Serviços Realizados</h4>
-                  <div class="capability-tags">
-                    <span class="cap-tag"
-                      ><i class="bi bi-vector-pen"></i> Projecto
-                      Arquitectónico</span
-                    >
-                    <span class="cap-tag"
-                      ><i class="bi bi-bricks"></i> Estrutura e Fundação</span
-                    >
-                    <span class="cap-tag"
-                      ><i class="bi bi-clipboard-check"></i> Gestão de
-                      Obra</span
-                    >
-                    <span class="cap-tag"
-                      ><i class="bi bi-palette"></i> Acabamento e Design</span
-                    >
-                    <span class="cap-tag"
-                      ><i class="bi bi-tree"></i> Paisagismo Urbano</span
-                    >
-                    <span class="cap-tag"
-                      ><i class="bi bi-shield-check"></i> Certificações
-                      Ambientais</span
-                    >
+
+                  <div class="capability-tags" id="projectServices">
+                    <!-- JS -->
                   </div>
                 </div>
-                <!-- End Capabilities Card -->
 
+                <!-- CLIENTE -->
                 <div
                   class="client-card"
                   data-aos="fade-left"
                   data-aos-delay="300"
                 >
                   <h4>Dados do Cliente</h4>
+
                   <ul>
                     <li>
-                      <span class="label">Empresa</span>
-                      <span class="value">Grupo Empresarial Angolano</span>
-                    </li>
-                    <li>
-                      <span class="label">Sector</span>
-                      <span class="value">Comercial / Serviços</span>
-                    </li>
-                    <li>
-                      <span class="label">Região</span>
-                      <span class="value">Luanda, Angola</span>
-                    </li>
-                  </ul>
-                </div>
-                <!-- End Client Card -->
+                      <span class="label"> Empresa </span>
 
-                <div
-                  class="certifications-card"
-                  data-aos="fade-left"
-                  data-aos-delay="350"
-                  style="
-                    margin-top: 20px;
-                    background: #f8f9fa;
-                    padding: 20px;
-                    border-radius: 8px;
-                  "
-                >
-                  <h4
-                    style="font-size: 16px; color: #2d4059; margin-bottom: 10px"
-                  >
-                    Certificações
-                  </h4>
-                  <ul style="list-style: none; padding: 0; margin: 0">
-                    <li
-                      style="
-                        padding: 6px 0;
-                        border-bottom: 1px solid #e9ecef;
-                        font-size: 14px;
-                        color: #555;
-                      "
-                    >
-                      <i
-                        class="bi bi-check-circle-fill"
-                        style="color: #28a745; margin-right: 8px"
-                      ></i>
-                      Normas de Construção Angolanas
+                      <span class="value" id="clientCompany"> — </span>
                     </li>
-                    <li
-                      style="
-                        padding: 6px 0;
-                        border-bottom: 1px solid #e9ecef;
-                        font-size: 14px;
-                        color: #555;
-                      "
-                    >
-                      <i
-                        class="bi bi-check-circle-fill"
-                        style="color: #28a745; margin-right: 8px"
-                      ></i>
-                      ISO 9001:2023
+
+                    <li>
+                      <span class="label"> Sector </span>
+
+                      <span class="value" id="clientSector"> — </span>
                     </li>
-                    <li style="padding: 6px 0; font-size: 14px; color: #555">
-                      <i
-                        class="bi bi-check-circle-fill"
-                        style="color: #28a745; margin-right: 8px"
-                      ></i>
-                      Certificação Ambiental Angola
+
+                    <li>
+                      <span class="label"> Região </span>
+
+                      <span class="value" id="clientRegion"> — </span>
                     </li>
                   </ul>
                 </div>
-                <!-- End Certifications Card -->
               </div>
-              <!-- End Sticky Sidebar -->
             </div>
           </div>
 
+          <!-- NAVEGAÇÃO -->
           <div class="bottom-nav" data-aos="fade-up" data-aos-delay="200">
-            <a href="project-details.html" class="btn-nav prev-btn">
+            <a href="#" class="btn-nav prev-btn" id="previousProject">
               <i class="bi bi-chevron-left"></i>
+
               <div class="btn-text">
-                <span class="btn-label">Anterior</span>
-                <span class="btn-title">Projecto Anterior</span>
+                <span class="btn-label"> Anterior </span>
+
+                <span class="btn-title" id="previousProjectTitle">
+                  Projeto Anterior
+                </span>
               </div>
             </a>
+
             <a href="index.html#projects" class="btn-nav center-btn">
               <i class="bi bi-grid-3x3-gap"></i>
-              <span>Ver Todos</span>
+
+              <span> Ver Todos </span>
             </a>
-            <a href="project-details.html" class="btn-nav next-btn">
+
+            <a href="#" class="btn-nav next-btn" id="nextProject">
               <div class="btn-text">
-                <span class="btn-label">Próximo</span>
-                <span class="btn-title">Próximo Projecto</span>
+                <span class="btn-label"> Próximo </span>
+
+                <span class="btn-title" id="nextProjectTitle">
+                  Próximo Projeto
+                </span>
               </div>
+
               <i class="bi bi-chevron-right"></i>
             </a>
           </div>
-          <!-- End Bottom Nav -->
         </div>
       </section>
       <!-- /Project Details Section -->
@@ -659,6 +431,7 @@
 
     <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/project-details.js"></script>
 
     <script
       type="module"

@@ -70,9 +70,9 @@
                 <i class="bi bi-chevron-down toggle-dropdown"></i
               ></a>
               <ul>
-                <li><a href="service-details.html">Detalhes do Serviço</a></li>
-                <li><a href="project-details.html">Detalhes do Projeto</a></li>
-                <li><a href="news-details.html">Detalhes das Notícias</a></li>
+                <li><a href="service.html">Detalhes do Serviço</a></li>
+                <li><a href="project.html">Detalhes do Projeto</a></li>
+                <li><a href="news.html">Detalhes das Notícias</a></li>
               </ul>
             </li>
             <li><a href="#contact">Contato</a></li>
@@ -441,52 +441,14 @@
           <div class="services-showcase">
             <!-- MENU DOS SERVIÇOS -->
             <div class="services-menu">
-              <div class="services-menu-list">
-                <button class="service-tab active" data-service="0">
-                  <span class="service-number">01</span>
-                  <span class="service-name">Construção Residencial</span>
-                </button>
-
-                <button class="service-tab" data-service="1">
-                  <span class="service-number">02</span>
-                  <span class="service-name">Obras Comerciais</span>
-                </button>
-
-                <button class="service-tab" data-service="2">
-                  <span class="service-number">03</span>
-                  <span class="service-name">Reformas e Restaurações</span>
-                </button>
-
-                <button class="service-tab" data-service="3">
-                  <span class="service-number">04</span>
-                  <span class="service-name">Infraestrutura e Urbanismo</span>
-                </button>
-
-                <button class="service-tab" data-service="4">
-                  <span class="service-number">05</span>
-                  <span class="service-name">Gerenciamento de Obras</span>
-                </button>
-
-                <button class="service-tab" data-service="5">
-                  <span class="service-number">06</span>
-                  <span class="service-name">Arquitetura e Design</span>
-                </button>
+              <div class="services-menu-list" id="servicesMenu">
+                <!-- Gerado pelo JavaScript -->
               </div>
 
               <!-- DROPDOWN MOBILE -->
               <div class="services-select-wrapper">
                 <select id="servicesSelect" class="services-select">
-                  <option value="0">01 — Construção Residencial</option>
-
-                  <option value="1">02 — Obras Comerciais</option>
-
-                  <option value="2">03 — Reformas e Restaurações</option>
-
-                  <option value="3">04 — Infraestrutura e Urbanismo</option>
-
-                  <option value="4">05 — Gerenciamento de Obras</option>
-
-                  <option value="5">06 — Arquitetura e Design</option>
+                  <!-- Gerado pelo JavaScript -->
                 </select>
 
                 <i class="bi bi-chevron-down"></i>
@@ -496,16 +458,17 @@
             <!-- CONTEÚDO DO SERVIÇO -->
             <div class="services-content">
               <div class="service-content-inner">
-                <span class="service-category"> CONSTRUÇÃO CIVIL </span>
+                <span class="service-category" id="serviceCategory">
+                  CONSTRUÇÃO CIVIL
+                </span>
 
-                <h3 id="serviceTitle">Construção Residencial</h3>
+                <h3 id="serviceTitle">Carregando...</h3>
 
                 <p id="serviceDescription">
-                  Casas, apartamentos e condomínios com design moderno e
-                  materiais de primeira linha.
+                  Aguarde enquanto carregamos os nossos serviços.
                 </p>
 
-                <a href="#contact" class="service-link">
+                <a href="#contact" class="service-link" id="serviceLink">
                   Solicite uma Consultoria
                   <i class="bi bi-arrow-right"></i>
                 </a>
@@ -517,7 +480,7 @@
               <img
                 id="serviceImage"
                 src="assets/img/construction/showcase-7.webp"
-                alt="Construção Residencial"
+                alt="Serviço HiperObras"
               />
             </div>
           </div>
@@ -634,379 +597,30 @@
       <!-- Projects Section -->
       <section id="projects" class="projects section light-background">
         <div class="container section-title" data-aos="fade-up">
-          <span class="label-tag">Nossos Projetos</span>
+          <span class="label-tag"> Nossos Projetos </span>
 
           <h2>
             Trabalhos que Refletem
-
             <br />
             A HiperObras
           </h2>
         </div>
 
         <div class="container" data-aos="fade-up" data-aos-delay="100">
-          <!-- Filtros -->
+          <!-- FILTROS -->
           <ul class="project-filters" id="projectFilters">
             <li data-filter="all" class="filter-active">Todos os Projetos</li>
+
             <li data-filter="residential">Residencial</li>
+
             <li data-filter="commercial">Comercial</li>
+
             <li data-filter="infrastructure">Infraestrutura</li>
           </ul>
 
-          <!-- Track: Todos -->
-          <div class="project-track active" data-category="all">
-            <div class="swiper project-swiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="project-card">
-                    <img
-                      src="assets/img/construction/project-1.webp"
-                      alt="Residencial HiperObras"
-                      class="img-fluid"
-                      loading="lazy"
-                    />
-                    <div class="card-overlay">
-                      <div class="card-content">
-                        <span class="tag">Residencial</span>
-                        <h3>Villa dos Pinheiros</h3>
-                        <p>
-                          Condomínio de alto padrão com arquitetura
-                          contemporânea
-                        </p>
-                      </div>
-                      <div class="card-actions">
-                        <a
-                          href="project-details.html"
-                          class="card-action"
-                          title="Ver Detalhes"
-                          ><i class="bi bi-arrow-right"></i
-                        ></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="swiper-slide">
-                  <div class="project-card">
-                    <img
-                      src="assets/img/construction/project-3.webp"
-                      alt="Comercial HiperObras"
-                      class="img-fluid"
-                      loading="lazy"
-                    />
-                    <div class="card-overlay">
-                      <div class="card-content">
-                        <span class="tag">Comercial</span>
-                        <h3>Torre Empresarial Sul</h3>
-                        <p>Edifício inteligente com foco em sustentabilidade</p>
-                      </div>
-                      <div class="card-actions">
-                        <a
-                          href="project-details.html"
-                          class="card-action"
-                          title="Ver Detalhes"
-                          ><i class="bi bi-arrow-right"></i
-                        ></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="swiper-slide">
-                  <div class="project-card">
-                    <img
-                      src="assets/img/construction/project-6.webp"
-                      alt="Infraestrutura HiperObras"
-                      class="img-fluid"
-                      loading="lazy"
-                    />
-                    <div class="card-overlay">
-                      <div class="card-content">
-                        <span class="tag">Infraestrutura</span>
-                        <h3>Viaduto da Integração</h3>
-                        <p>Projeto viário que melhorou a mobilidade urbana</p>
-                      </div>
-                      <div class="card-actions">
-                        <a
-                          href="project-details.html"
-                          class="card-action"
-                          title="Ver Detalhes"
-                          ><i class="bi bi-arrow-right"></i
-                        ></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="swiper-slide">
-                  <div class="project-card">
-                    <img
-                      src="assets/img/construction/project-9.webp"
-                      alt="Residencial HiperObras"
-                      class="img-fluid"
-                      loading="lazy"
-                    />
-                    <div class="card-overlay">
-                      <div class="card-content">
-                        <span class="tag">Residencial</span>
-                        <h3>Residencial Lago Azul</h3>
-                        <p>
-                          Apartamentos com vista panorâmica e áreas de lazer
-                        </p>
-                      </div>
-                      <div class="card-actions">
-                        <a
-                          href="project-details.html"
-                          class="card-action"
-                          title="Ver Detalhes"
-                          ><i class="bi bi-arrow-right"></i
-                        ></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="swiper-slide">
-                  <div class="project-card">
-                    <img
-                      src="assets/img/construction/project-10.webp"
-                      alt="Comercial HiperObras"
-                      class="img-fluid"
-                      loading="lazy"
-                    />
-                    <div class="card-overlay">
-                      <div class="card-content">
-                        <span class="tag">Comercial</span>
-                        <h3>Park Shopping Center</h3>
-                        <p>
-                          Centro comercial moderno com ampla variedade de lojas
-                        </p>
-                      </div>
-                      <div class="card-actions">
-                        <a
-                          href="project-details.html"
-                          class="card-action"
-                          title="Ver Detalhes"
-                          ><i class="bi bi-arrow-right"></i
-                        ></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <button class="project-prev" aria-label="Projeto anterior">
-              <i class="bi bi-chevron-left"></i>
-            </button>
-            <button class="project-next" aria-label="Próximo projeto">
-              <i class="bi bi-chevron-right"></i>
-            </button>
-          </div>
-
-          <!-- Track: Residencial -->
-          <div class="project-track" data-category="residential">
-            <div class="swiper project-swiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="project-card">
-                    <img
-                      src="assets/img/construction/project-1.webp"
-                      alt="Residencial HiperObras"
-                      class="img-fluid"
-                      loading="lazy"
-                    />
-                    <div class="card-overlay">
-                      <div class="card-content">
-                        <span class="tag">Residencial</span>
-                        <h3>Villa dos Pinheiros</h3>
-                        <p>
-                          Condomínio de alto padrão com arquitetura
-                          contemporânea
-                        </p>
-                      </div>
-                      <div class="card-actions">
-                        <a
-                          href="project-details.html"
-                          class="card-action"
-                          title="Ver Detalhes"
-                          ><i class="bi bi-arrow-right"></i
-                        ></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="swiper-slide">
-                  <div class="project-card">
-                    <img
-                      src="assets/img/construction/project-9.webp"
-                      alt="Residencial HiperObras"
-                      class="img-fluid"
-                      loading="lazy"
-                    />
-                    <div class="card-overlay">
-                      <div class="card-content">
-                        <span class="tag">Residencial</span>
-                        <h3>Residencial Lago Azul</h3>
-                        <p>
-                          Apartamentos com vista panorâmica e áreas de lazer
-                        </p>
-                      </div>
-                      <div class="card-actions">
-                        <a
-                          href="project-details.html"
-                          class="card-action"
-                          title="Ver Detalhes"
-                          ><i class="bi bi-arrow-right"></i
-                        ></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <button class="project-prev" aria-label="Projeto anterior">
-              <i class="bi bi-chevron-left"></i>
-            </button>
-            <button class="project-next" aria-label="Próximo projeto">
-              <i class="bi bi-chevron-right"></i>
-            </button>
-          </div>
-
-          <!-- Track: Comercial -->
-          <div class="project-track" data-category="commercial">
-            <div class="swiper project-swiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="project-card">
-                    <img
-                      src="assets/img/construction/project-3.webp"
-                      alt="Comercial HiperObras"
-                      class="img-fluid"
-                      loading="lazy"
-                    />
-                    <div class="card-overlay">
-                      <div class="card-content">
-                        <span class="tag">Comercial</span>
-                        <h3>Torre Empresarial Sul</h3>
-                        <p>Edifício inteligente com foco em sustentabilidade</p>
-                      </div>
-                      <div class="card-actions">
-                        <a
-                          href="project-details.html"
-                          class="card-action"
-                          title="Ver Detalhes"
-                          ><i class="bi bi-arrow-right"></i
-                        ></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="swiper-slide">
-                  <div class="project-card">
-                    <img
-                      src="assets/img/construction/project-10.webp"
-                      alt="Comercial HiperObras"
-                      class="img-fluid"
-                      loading="lazy"
-                    />
-                    <div class="card-overlay">
-                      <div class="card-content">
-                        <span class="tag">Comercial</span>
-                        <h3>Park Shopping Center</h3>
-                        <p>
-                          Centro comercial moderno com ampla variedade de lojas
-                        </p>
-                      </div>
-                      <div class="card-actions">
-                        <a
-                          href="project-details.html"
-                          class="card-action"
-                          title="Ver Detalhes"
-                          ><i class="bi bi-arrow-right"></i
-                        ></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <button class="project-prev" aria-label="Projeto anterior">
-              <i class="bi bi-chevron-left"></i>
-            </button>
-            <button class="project-next" aria-label="Próximo projeto">
-              <i class="bi bi-chevron-right"></i>
-            </button>
-          </div>
-
-          <!-- Track: Infraestrutura -->
-          <div class="project-track" data-category="infrastructure">
-            <div class="swiper project-swiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="project-card">
-                    <img
-                      src="assets/img/construction/project-6.webp"
-                      alt="Infraestrutura HiperObras"
-                      class="img-fluid"
-                      loading="lazy"
-                    />
-                    <div class="card-overlay">
-                      <div class="card-content">
-                        <span class="tag">Infraestrutura</span>
-                        <h3>Viaduto da Integração</h3>
-                        <p>Projeto viário que melhorou a mobilidade urbana</p>
-                      </div>
-                      <div class="card-actions">
-                        <a
-                          href="project-details.html"
-                          class="card-action"
-                          title="Ver Detalhes"
-                          ><i class="bi bi-arrow-right"></i
-                        ></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="swiper-slide">
-                  <div class="project-card">
-                    <img
-                      src="assets/img/construction/project-12.webp"
-                      alt="Infraestrutura HiperObras"
-                      class="img-fluid"
-                      loading="lazy"
-                    />
-                    <div class="card-overlay">
-                      <div class="card-content">
-                        <span class="tag">Infraestrutura</span>
-                        <h3>Terminal Rodoviário Norte</h3>
-                        <p>Complexo de transporte integrado e moderno</p>
-                      </div>
-                      <div class="card-actions">
-                        <a
-                          href="project-details.html"
-                          class="card-action"
-                          title="Ver Detalhes"
-                          ><i class="bi bi-arrow-right"></i
-                        ></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <button class="project-prev" aria-label="Projeto anterior">
-              <i class="bi bi-chevron-left"></i>
-            </button>
-            <button class="project-next" aria-label="Próximo projeto">
-              <i class="bi bi-chevron-right"></i>
-            </button>
+          <!-- PROJETOS -->
+          <div id="projectsContainer" class="project-tracks-container">
+            <!-- Gerado pelo JavaScript -->
           </div>
         </div>
       </section>
@@ -1308,7 +922,7 @@
                 "spaceBetween": 30,
                 "breakpoints": {
                   "320": {
-                    "slidesPerView": 2,
+                    "slidesPerView": 1,
                     "spaceBetween": 20
                   },
                   "768": {
@@ -1323,117 +937,7 @@
               }
             </script>
 
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="blog-post-item">
-                  <img
-                    src="assets/img/blog/blog-post-1.webp"
-                    alt="Blog Image"
-                  />
-                  <div class="blog-post-content">
-                    <h2>
-                      <a href="news-details.html"
-                        >Neque porro quisquam est qui dolorem ipsum quia dolor
-                        sit amet</a
-                      >
-                    </h2>
-
-                    <a href="news-details.html" class="read-more"
-                      >Ler Mais <i class="bi bi-arrow-right"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-              <!-- End slide item -->
-
-              <div class="swiper-slide">
-                <div class="blog-post-item">
-                  <img
-                    src="assets/img/blog/blog-post-2.webp"
-                    alt="Blog Image"
-                  />
-                  <div class="blog-post-content">
-                    <h2>
-                      <a href="news-details.html"
-                        >Sed ut perspiciatis unde omnis iste natus error sit
-                        voluptatem</a
-                      >
-                    </h2>
-
-                    <a href="news-details.html" class="read-more"
-                      >Ler Mais <i class="bi bi-arrow-right"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-              <!-- End slide item -->
-
-              <div class="swiper-slide">
-                <div class="blog-post-item">
-                  <img
-                    src="assets/img/blog/blog-post-5.webp"
-                    alt="Blog Image"
-                  />
-                  <div class="blog-post-content">
-                    <h2>
-                      <a href="news-details.html"
-                        >At vero eos et accusamus et iusto odio dignissimos
-                        ducimus</a
-                      >
-                    </h2>
-
-                    <a href="news-details.html" class="read-more"
-                      >Ler Mais <i class="bi bi-arrow-right"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-              <!-- End slide item -->
-
-              <div class="swiper-slide">
-                <div class="blog-post-item">
-                  <img
-                    src="assets/img/blog/blog-post-6.webp"
-                    alt="Blog Image"
-                  />
-                  <div class="blog-post-content">
-                    <h2>
-                      <a href="news-details.html"
-                        >Et harum quidem rerum facilis est et expedita
-                        distinctio</a
-                      >
-                    </h2>
-
-                    <a href="news-details.html" class="read-more"
-                      >Ler Mais <i class="bi bi-arrow-right"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-              <!-- End slide item -->
-
-              <div class="swiper-slide">
-                <div class="blog-post-item">
-                  <img
-                    src="assets/img/blog/blog-post-7.webp"
-                    alt="Blog Image"
-                  />
-                  <div class="blog-post-content">
-                    <h2>
-                      <a href="news-details.html"
-                        >Nam libero tempore, cum soluta nobis est eligendi
-                        optio</a
-                      >
-                    </h2>
-
-                    <a href="news-details.html" class="read-more"
-                      >Ler Mais <i class="bi bi-arrow-right"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-              <!-- End slide item -->
-            </div>
+            <div class="swiper-wrapper" id="homeBlogs"></div>
           </div>
         </div>
       </section>
@@ -1739,5 +1243,8 @@
     <script src="assets/js/slide-cards.js"></script>
     <script src="assets/js/load.js"></script>
     <script src="assets/js/service.js"></script>
+    <script src="assets/js/blogs.js"></script>
+    <script src="assets/js/services.js"></script>
+    <script src="assets/js/projects.js"></script>
   </body>
 </html>

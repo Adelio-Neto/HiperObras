@@ -1,0 +1,551 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "slug": "villa-dos-pinheiros",
+      "number": "01",
+      "title": "Villa dos Pinheiros",
+      "category": "residential",
+      "categoryName": "Residencial",
+      "shortDescription": "Condomínio de alto padrão com arquitetura contemporânea.",
+      "mainImage": "assets/img/construction/project-1.webp",
+      "alt": "Villa dos Pinheiros",
+
+      "status": "Concluído",
+      "date": "Dezembro de 2025",
+      "location": "Luanda, Angola",
+      "company": "HiperObras Angola",
+
+      "overview": {
+        "summary": "Um projeto residencial de alto padrão desenvolvido para proporcionar conforto, segurança e integração entre arquitetura contemporânea e espaços exteriores.",
+        "description": "A Villa dos Pinheiros foi concebida com uma abordagem arquitetónica moderna, privilegiando ambientes funcionais, iluminação natural e acabamentos de qualidade."
+      },
+
+      "challenges": "A execução do projeto exigiu uma coordenação cuidadosa entre as diferentes equipas, fornecedores e etapas de construção, garantindo que os trabalhos avançassem de acordo com o planeamento estabelecido.",
+
+      "methodology": "A execução combinou planeamento técnico, acompanhamento permanente da obra, controlo de qualidade e utilização de materiais selecionados para garantir durabilidade e qualidade.",
+
+      "gallery": [
+        {
+          "image": "assets/img/construction/project-1.webp",
+          "alt": "Vista exterior da Villa dos Pinheiros"
+        },
+        {
+          "image": "assets/img/construction/project-9.webp",
+          "alt": "Área residencial da Villa dos Pinheiros"
+        },
+        {
+          "image": "assets/img/construction/project-6.webp",
+          "alt": "Detalhes da construção"
+        }
+      ],
+
+      "specifications": [
+        {
+          "number": "12",
+          "label": "Moradias"
+        },
+        {
+          "number": "18",
+          "label": "Meses"
+        },
+        {
+          "number": "Kz 120M",
+          "label": "Orçamento"
+        },
+        {
+          "number": "3",
+          "label": "Hectares"
+        }
+      ],
+
+      "services": [
+        {
+          "icon": "bi-vector-pen",
+          "name": "Projeto Arquitectónico"
+        },
+        {
+          "icon": "bi-bricks",
+          "name": "Estrutura e Fundação"
+        },
+        {
+          "icon": "bi-clipboard-check",
+          "name": "Gestão de Obra"
+        },
+        {
+          "icon": "bi-palette",
+          "name": "Acabamento e Design"
+        },
+        {
+          "icon": "bi-tree",
+          "name": "Paisagismo"
+        }
+      ],
+
+      "client": {
+        "company": "Cliente Particular",
+        "sector": "Residencial",
+        "region": "Luanda, Angola"
+      },
+
+      "certifications": [
+        "Normas de Construção Angolanas",
+        "ISO 9001:2023",
+        "Certificação Ambiental Angola"
+      ]
+    },
+
+    {
+      "id": 2,
+      "slug": "torre-empresarial-sul",
+      "number": "02",
+      "title": "Torre Empresarial Sul",
+      "category": "commercial",
+      "categoryName": "Comercial",
+      "shortDescription": "Edifício inteligente com foco em sustentabilidade.",
+      "mainImage": "assets/img/construction/project-3.webp",
+      "alt": "Torre Empresarial Sul",
+
+      "status": "Concluído",
+      "date": "Novembro de 2025",
+      "location": "Luanda, Angola",
+      "company": "HiperObras Angola",
+
+      "overview": {
+        "summary": "Empreendimento comercial moderno desenvolvido para empresas angolanas e internacionais.",
+        "description": "A Torre Empresarial Sul combina arquitetura contemporânea, espaços corporativos funcionais e soluções destinadas a melhorar o desempenho energético do edifício."
+      },
+
+      "challenges": "A construção exigiu uma logística rigorosa devido à localização urbana e à necessidade de coordenar diferentes equipas e fornecedores durante a execução.",
+
+      "methodology": "Foram aplicados métodos de planeamento e controlo de obra, combinados com acompanhamento técnico permanente e soluções construtivas adequadas às características do projeto.",
+
+      "gallery": [
+        {
+          "image": "assets/img/construction/project-3.webp",
+          "alt": "Torre Empresarial Sul"
+        },
+        {
+          "image": "assets/img/construction/project-10.webp",
+          "alt": "Interior da Torre Empresarial Sul"
+        },
+        {
+          "image": "assets/img/construction/project-12.webp",
+          "alt": "Detalhes da Torre Empresarial Sul"
+        }
+      ],
+
+      "specifications": [
+        {
+          "number": "20",
+          "label": "Andares"
+        },
+        {
+          "number": "24",
+          "label": "Meses"
+        },
+        {
+          "number": "Kz 95M",
+          "label": "Orçamento"
+        },
+        {
+          "number": "2",
+          "label": "Hectares"
+        }
+      ],
+
+      "services": [
+        {
+          "icon": "bi-vector-pen",
+          "name": "Projeto Arquitectónico"
+        },
+        {
+          "icon": "bi-bricks",
+          "name": "Estrutura e Fundação"
+        },
+        {
+          "icon": "bi-clipboard-check",
+          "name": "Gestão de Obra"
+        },
+        {
+          "icon": "bi-lightning-charge",
+          "name": "Eficiência Energética"
+        },
+        {
+          "icon": "bi-palette",
+          "name": "Acabamentos"
+        }
+      ],
+
+      "client": {
+        "company": "Grupo Empresarial Angolano",
+        "sector": "Comercial / Serviços",
+        "region": "Luanda, Angola"
+      },
+
+      "certifications": [
+        "Normas de Construção Angolanas",
+        "ISO 9001:2023",
+        "Certificação Ambiental Angola"
+      ]
+    },
+
+    {
+      "id": 3,
+      "slug": "viaduto-da-integracao",
+      "number": "03",
+      "title": "Viaduto da Integração",
+      "category": "infrastructure",
+      "categoryName": "Infraestrutura",
+      "shortDescription": "Projeto viário que melhorou a mobilidade urbana.",
+      "mainImage": "assets/img/construction/project-6.webp",
+      "alt": "Viaduto da Integração",
+
+      "status": "Concluído",
+      "date": "Outubro de 2025",
+      "location": "Luanda, Angola",
+      "company": "HiperObras Angola",
+
+      "overview": {
+        "summary": "Projeto de infraestrutura desenvolvido para melhorar a circulação e mobilidade urbana.",
+        "description": "O Viaduto da Integração foi concebido como uma solução para melhorar o fluxo de tráfego e facilitar a ligação entre diferentes zonas da cidade."
+      },
+
+      "challenges": "A execução em uma zona de elevada circulação exigiu planeamento logístico, controlo rigoroso das etapas e medidas para minimizar os impactos na circulação urbana.",
+
+      "methodology": "A obra foi executada através de um planeamento faseado, acompanhamento técnico e utilização de soluções estruturais adequadas às exigências do projeto.",
+
+      "gallery": [
+        {
+          "image": "assets/img/construction/project-6.webp",
+          "alt": "Viaduto da Integração"
+        },
+        {
+          "image": "assets/img/construction/project-12.webp",
+          "alt": "Estrutura do viaduto"
+        },
+        {
+          "image": "assets/img/construction/project-10.webp",
+          "alt": "Obras de infraestrutura"
+        }
+      ],
+
+      "specifications": [
+        {
+          "number": "850",
+          "label": "Metros"
+        },
+        {
+          "number": "16",
+          "label": "Meses"
+        },
+        {
+          "number": "Kz 150M",
+          "label": "Orçamento"
+        },
+        {
+          "number": "4",
+          "label": "Faixas"
+        }
+      ],
+
+      "services": [
+        {
+          "icon": "bi-signpost-2",
+          "name": "Infraestrutura Rodoviária"
+        },
+        {
+          "icon": "bi-bricks",
+          "name": "Estrutura"
+        },
+        {
+          "icon": "bi-clipboard-check",
+          "name": "Gestão de Obra"
+        },
+        {
+          "icon": "bi-rulers",
+          "name": "Engenharia"
+        }
+      ],
+
+      "client": {
+        "company": "Entidade Pública",
+        "sector": "Infraestrutura",
+        "region": "Luanda, Angola"
+      },
+
+      "certifications": [
+        "Normas de Construção Angolanas",
+        "Normas de Segurança Rodoviária"
+      ]
+    },
+
+    {
+      "id": 4,
+      "slug": "residencial-lago-azul",
+      "number": "04",
+      "title": "Residencial Lago Azul",
+      "category": "residential",
+      "categoryName": "Residencial",
+      "shortDescription": "Apartamentos com vista panorâmica e áreas de lazer.",
+      "mainImage": "assets/img/construction/project-9.webp",
+      "alt": "Residencial Lago Azul",
+
+      "status": "Concluído",
+      "date": "Agosto de 2025",
+      "location": "Luanda, Angola",
+      "company": "HiperObras Angola",
+
+      "overview": {
+        "summary": "Empreendimento residencial com apartamentos modernos, áreas de lazer e espaços exteriores.",
+        "description": "O projeto foi desenvolvido para proporcionar conforto e qualidade de vida aos seus residentes através de uma combinação de arquitetura contemporânea e áreas funcionais."
+      },
+
+      "challenges": "O projeto exigiu coordenação entre diferentes especialidades e atenção especial à integração das áreas comuns e espaços exteriores.",
+
+      "methodology": "A execução foi organizada em diferentes fases, com acompanhamento técnico e controlo da qualidade dos materiais e acabamentos.",
+
+      "gallery": [
+        {
+          "image": "assets/img/construction/project-9.webp",
+          "alt": "Residencial Lago Azul"
+        },
+        {
+          "image": "assets/img/construction/project-1.webp",
+          "alt": "Área exterior do Residencial Lago Azul"
+        },
+        {
+          "image": "assets/img/construction/project-6.webp",
+          "alt": "Área comum residencial"
+        }
+      ],
+
+      "specifications": [
+        {
+          "number": "48",
+          "label": "Apartamentos"
+        },
+        {
+          "number": "22",
+          "label": "Meses"
+        },
+        {
+          "number": "Kz 180M",
+          "label": "Orçamento"
+        },
+        {
+          "number": "4",
+          "label": "Blocos"
+        }
+      ],
+
+      "services": [
+        {
+          "icon": "bi-house",
+          "name": "Construção Residencial"
+        },
+        {
+          "icon": "bi-bricks",
+          "name": "Estrutura"
+        },
+        {
+          "icon": "bi-palette",
+          "name": "Acabamentos"
+        },
+        {
+          "icon": "bi-tree",
+          "name": "Paisagismo"
+        }
+      ],
+
+      "client": {
+        "company": "Grupo Imobiliário",
+        "sector": "Imobiliário",
+        "region": "Luanda, Angola"
+      },
+
+      "certifications": ["Normas de Construção Angolanas", "ISO 9001:2023"]
+    },
+
+    {
+      "id": 5,
+      "slug": "park-shopping-center",
+      "number": "05",
+      "title": "Park Shopping Center",
+      "category": "commercial",
+      "categoryName": "Comercial",
+      "shortDescription": "Centro comercial moderno com ampla variedade de lojas.",
+      "mainImage": "assets/img/construction/project-10.webp",
+      "alt": "Park Shopping Center",
+
+      "status": "Concluído",
+      "date": "Junho de 2025",
+      "location": "Luanda, Angola",
+      "company": "HiperObras Angola",
+
+      "overview": {
+        "summary": "Centro comercial moderno projetado para integrar lojas, serviços, restauração e áreas de convivência.",
+        "description": "O empreendimento foi concebido para proporcionar uma experiência comercial moderna e confortável, combinando espaços amplos e soluções funcionais."
+      },
+
+      "challenges": "A dimensão do empreendimento exigiu uma gestão rigorosa das equipas, fornecedores e cronograma de execução.",
+
+      "methodology": "Foi utilizado um processo de execução faseado com acompanhamento técnico, controlo de qualidade e coordenação entre as diversas especialidades.",
+
+      "gallery": [
+        {
+          "image": "assets/img/construction/project-10.webp",
+          "alt": "Park Shopping Center"
+        },
+        {
+          "image": "assets/img/construction/project-3.webp",
+          "alt": "Área comercial"
+        },
+        {
+          "image": "assets/img/construction/project-12.webp",
+          "alt": "Interior do shopping"
+        }
+      ],
+
+      "specifications": [
+        {
+          "number": "80",
+          "label": "Lojas"
+        },
+        {
+          "number": "26",
+          "label": "Meses"
+        },
+        {
+          "number": "Kz 250M",
+          "label": "Orçamento"
+        },
+        {
+          "number": "5",
+          "label": "Hectares"
+        }
+      ],
+
+      "services": [
+        {
+          "icon": "bi-building",
+          "name": "Construção Comercial"
+        },
+        {
+          "icon": "bi-bricks",
+          "name": "Estrutura"
+        },
+        {
+          "icon": "bi-clipboard-check",
+          "name": "Gestão de Obra"
+        },
+        {
+          "icon": "bi-palette",
+          "name": "Design e Acabamentos"
+        }
+      ],
+
+      "client": {
+        "company": "Grupo Empresarial",
+        "sector": "Comercial",
+        "region": "Luanda, Angola"
+      },
+
+      "certifications": [
+        "Normas de Construção Angolanas",
+        "ISO 9001:2023",
+        "Certificação Ambiental Angola"
+      ]
+    },
+
+    {
+      "id": 6,
+      "slug": "terminal-rodoviario-norte",
+      "number": "06",
+      "title": "Terminal Rodoviário Norte",
+      "category": "infrastructure",
+      "categoryName": "Infraestrutura",
+      "shortDescription": "Complexo de transporte integrado e moderno.",
+      "mainImage": "assets/img/construction/project-12.webp",
+      "alt": "Terminal Rodoviário Norte",
+
+      "status": "Concluído",
+      "date": "Abril de 2025",
+      "location": "Luanda, Angola",
+      "company": "HiperObras Angola",
+
+      "overview": {
+        "summary": "Complexo de transporte desenvolvido para melhorar a organização e eficiência da mobilidade urbana.",
+        "description": "O Terminal Rodoviário Norte foi concebido para integrar diferentes operações de transporte e oferecer melhores condições aos utilizadores."
+      },
+
+      "challenges": "A execução exigiu atenção especial à circulação de pessoas, veículos e equipamentos durante as diferentes fases da construção.",
+
+      "methodology": "A obra foi dividida em fases de execução, permitindo uma melhor coordenação das equipas e controlo dos trabalhos.",
+
+      "gallery": [
+        {
+          "image": "assets/img/construction/project-12.webp",
+          "alt": "Terminal Rodoviário Norte"
+        },
+        {
+          "image": "assets/img/construction/project-6.webp",
+          "alt": "Área de transporte"
+        },
+        {
+          "image": "assets/img/construction/project-10.webp",
+          "alt": "Estrutura do terminal"
+        }
+      ],
+
+      "specifications": [
+        {
+          "number": "18",
+          "label": "Plataformas"
+        },
+        {
+          "number": "14",
+          "label": "Meses"
+        },
+        {
+          "number": "Kz 110M",
+          "label": "Orçamento"
+        },
+        {
+          "number": "2",
+          "label": "Hectares"
+        }
+      ],
+
+      "services": [
+        {
+          "icon": "bi-bus-front",
+          "name": "Infraestrutura Rodoviária"
+        },
+        {
+          "icon": "bi-bricks",
+          "name": "Construção"
+        },
+        {
+          "icon": "bi-signpost-2",
+          "name": "Urbanismo"
+        },
+        {
+          "icon": "bi-clipboard-check",
+          "name": "Gestão de Obra"
+        }
+      ],
+
+      "client": {
+        "company": "Entidade Pública",
+        "sector": "Transportes",
+        "region": "Luanda, Angola"
+      },
+
+      "certifications": [
+        "Normas de Construção Angolanas",
+        "Normas de Segurança"
+      ]
+    }
+  ]
+}

@@ -8498,3 +8498,346 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 60%);
   font-size: 14px;
 }
+
+/*--------------------------------------------------------------
+# Blog Categories
+--------------------------------------------------------------*/
+
+.categories-widget #blog-categories {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.categories-widget .category-item {
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid
+    color-mix(in srgb, var(--default-color), transparent 92%);
+}
+
+/* -------------------------------------------------------------
+   Botão da categoria
+------------------------------------------------------------- */
+
+.categories-widget .category-toggle {
+  width: 100%;
+  min-height: 46px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 12px 2px;
+
+  border: 0;
+  outline: none;
+
+  background: transparent;
+
+  color: var(--default-color);
+
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    color 0.25s ease,
+    padding 0.25s ease;
+}
+
+/* Texto da categoria */
+
+.categories-widget .category-toggle > span:first-child {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Quantidade */
+
+.categories-widget .category-count {
+  font-size: 12px;
+  font-weight: 500;
+
+  color: color-mix(in srgb, var(--default-color), transparent 45%);
+}
+
+/* Ícone */
+
+.categories-widget .category-toggle i {
+  width: 26px;
+  height: 26px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: color-mix(in srgb, var(--accent-color), transparent 92%);
+
+  color: var(--accent-color);
+
+  font-size: 11px;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+/* Hover */
+
+.categories-widget .category-toggle:hover {
+  color: var(--accent-color);
+}
+
+.categories-widget .category-toggle:hover i {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+}
+
+/* -------------------------------------------------------------
+   Categoria aberta
+------------------------------------------------------------- */
+
+.categories-widget .category-item.active > .category-toggle {
+  color: var(--accent-color);
+}
+
+/* Rodar seta */
+
+.categories-widget .category-item.active .category-toggle i {
+  transform: rotate(180deg);
+
+  background: var(--accent-color);
+
+  color: var(--contrast-color);
+}
+
+/* -------------------------------------------------------------
+   Sublista
+------------------------------------------------------------- */
+
+.categories-widget .category-posts {
+  list-style: none;
+
+  margin: 0;
+  padding: 0 0 0 12px;
+
+  max-height: 0;
+
+  overflow: hidden;
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  transition:
+    max-height 0.35s ease,
+    opacity 0.25s ease,
+    visibility 0.25s ease;
+}
+
+/* Só aparece quando clicar */
+
+.categories-widget .category-item.active .category-posts {
+  max-height: 600px;
+
+  padding-bottom: 10px;
+
+  opacity: 1;
+
+  visibility: visible;
+}
+
+/* -------------------------------------------------------------
+   Títulos dos blogs
+------------------------------------------------------------- */
+
+.categories-widget .category-posts li {
+  position: relative;
+
+  margin: 0;
+  padding: 7px 8px 7px 17px;
+}
+
+/* Linha vertical */
+
+.categories-widget .category-posts li::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 0;
+  bottom: 0;
+
+  width: 2px;
+
+  background: color-mix(in srgb, var(--accent-color), transparent 75%);
+}
+
+/* Pequeno ponto */
+
+.categories-widget .category-posts li::after {
+  content: "";
+
+  position: absolute;
+
+  left: -2px;
+  top: 15px;
+
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: var(--accent-color);
+}
+
+/* Link */
+
+.categories-widget .category-posts a {
+  display: block;
+
+  color: color-mix(in srgb, var(--default-color), transparent 25%);
+
+  font-size: 13px;
+
+  line-height: 1.5;
+
+  text-decoration: none;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+/* Hover título */
+
+.categories-widget .category-posts a:hover {
+  color: var(--accent-color);
+
+  transform: translateX(3px);
+}
+
+/*--------------------------------------------------------------
+# Recent Posts Pagination
+--------------------------------------------------------------*/
+
+.recent-posts-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 22px;
+  padding-top: 16px;
+
+  border-top: 1px solid
+    color-mix(in srgb, var(--default-color), transparent 90%);
+}
+
+/* -------------------------------------------------------------
+   Botões
+------------------------------------------------------------- */
+
+.recent-posts-pagination .pagination-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  min-width: 92px;
+  height: 34px;
+
+  padding: 0 12px;
+
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+
+  border-radius: 5px;
+
+  background: var(--surface-color);
+
+  color: var(--default-color);
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+/* Ícones */
+
+.recent-posts-pagination .pagination-btn i {
+  font-size: 11px;
+
+  transition: transform 0.25s ease;
+}
+
+/* Hover */
+
+.recent-posts-pagination .pagination-btn:not(:disabled):hover {
+  background: var(--accent-color);
+
+  border-color: var(--accent-color);
+
+  color: var(--contrast-color);
+}
+
+/* Movimento dos ícones */
+
+.recent-posts-pagination .pagination-btn:first-child:not(:disabled):hover i {
+  transform: translateX(-3px);
+}
+
+.recent-posts-pagination .pagination-btn:last-child:not(:disabled):hover i {
+  transform: translateX(3px);
+}
+
+/* -------------------------------------------------------------
+   Botão desativado
+------------------------------------------------------------- */
+
+.recent-posts-pagination .pagination-btn:disabled {
+  opacity: 0.4;
+
+  cursor: not-allowed;
+
+  background: transparent;
+}
+
+/* -------------------------------------------------------------
+   Indicador da página
+------------------------------------------------------------- */
+
+.recent-posts-pagination .pagination-page {
+  min-width: 48px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 5px;
+
+  background: color-mix(in srgb, var(--accent-color), transparent 92%);
+
+  color: var(--accent-color);
+
+  font-size: 12px;
+  font-weight: 700;
+}

@@ -112,63 +112,60 @@
       <section id="service-details" class="service-details section">
         <div class="container" data-aos="fade-up" data-aos-delay="100">
           <div class="row gy-5">
+            <!-- =====================================================
+           SIDEBAR
+      ====================================================== -->
+
             <div class="col-lg-5">
               <div class="service-sidebar">
+                <!-- VISÃO GERAL -->
                 <div
                   class="service-overview"
                   data-aos="fade-up"
                   data-aos-delay="100"
                 >
                   <div class="overview-header">
-                    <i class="bi bi-house-door-fill"></i>
+                    <i
+                      id="serviceOverviewIcon"
+                      class="bi bi-house-door-fill"
+                    ></i>
+
                     <h3>Visão Geral do Serviço</h3>
                   </div>
+
                   <div class="overview-content">
-                    <h2>Construção Residencial</h2>
-                    <p>
-                      Projetamos e construímos propriedades residenciais de alto
-                      padrão que combinam arquitetura moderna com espaços
-                      funcionais. Desde casas unifamiliares até empreendimentos
-                      multifamiliares, entregamos qualidade em cada projeto.
+                    <h2 id="serviceOverviewTitle">Carregando...</h2>
+
+                    <p id="serviceOverviewDescription">
+                      Carregando informações do serviço...
                     </p>
+
                     <div class="cta-button">
-                      <a href="index.html#contact" class="btn-get-started"
-                        >Solicitar Orçamento Gratuito</a
+                      <a
+                        href="index.html#contact"
+                        class="btn-get-started"
+                        id="serviceQuoteLink"
                       >
+                        Solicitar Orçamento Gratuito
+                      </a>
                     </div>
                   </div>
                 </div>
 
+                <!-- BENEFÍCIOS -->
                 <div
                   class="key-benefits"
                   data-aos="fade-up"
                   data-aos-delay="200"
                 >
                   <h4>Benefícios Principais</h4>
-                  <ul>
-                    <li>
-                      <i class="bi bi-check-circle-fill"></i> Design
-                      personalizado adaptado às suas necessidades
-                    </li>
-                    <li>
-                      <i class="bi bi-check-circle-fill"></i> Práticas de
-                      construção energeticamente eficientes
-                    </li>
-                    <li>
-                      <i class="bi bi-check-circle-fill"></i> Materiais e
-                      acabamentos premium
-                    </li>
-                    <li>
-                      <i class="bi bi-check-circle-fill"></i> Entrega no prazo e
-                      dentro do orçamento
-                    </li>
-                    <li>
-                      <i class="bi bi-check-circle-fill"></i> Garantia
-                      estrutural de 10 anos
-                    </li>
+
+                  <ul id="serviceBenefits">
+                    <!-- Gerado pelo JS -->
                   </ul>
                 </div>
 
+                <!-- CONTACTO -->
                 <div
                   class="contact-card"
                   data-aos="fade-up"
@@ -176,24 +173,31 @@
                 >
                   <div class="contact-header">
                     <i class="bi bi-headset"></i>
+
                     <h4>Precisa de Ajuda?</h4>
                   </div>
+
                   <div class="contact-info">
                     <div class="info-row">
                       <i class="bi bi-telephone"></i>
+
                       <div>
-                        <span>Ligue-nos</span>
+                        <span> Ligue-nos </span>
+
                         <p>+244 999 999 999</p>
                       </div>
                     </div>
+
                     <div class="info-row">
                       <i class="bi bi-envelope"></i>
+
                       <div>
-                        <span>E-mail</span>
+                        <span> E-mail </span>
+
                         <p>
-                          <a href="mailto:contato@hiperobras.ao"
-                            >contato@hiperobras.ao</a
-                          >
+                          <a href="mailto:contato@hiperobras.ao">
+                            contato@hiperobras.ao
+                          </a>
                         </p>
                       </div>
                     </div>
@@ -202,8 +206,13 @@
               </div>
             </div>
 
+            <!-- =====================================================
+           CONTEÚDO
+      ====================================================== -->
+
             <div class="col-lg-7">
               <div class="service-content">
+                <!-- GALERIA -->
                 <div
                   class="image-gallery"
                   data-aos="zoom-in"
@@ -230,65 +239,40 @@
                         }
                       }
                     </script>
-                    <div class="swiper-wrapper align-items-center">
-                      <div class="swiper-slide">
-                        <img
-                          src="assets/img/construction/project-1.webp"
-                          alt="Projeto Residencial HiperObras"
-                          class="img-fluid"
-                          loading="lazy"
-                        />
-                      </div>
-                      <div class="swiper-slide">
-                        <img
-                          src="assets/img/construction/project-9.webp"
-                          alt="Projeto Residencial HiperObras"
-                          class="img-fluid"
-                          loading="lazy"
-                        />
-                      </div>
-                      <div class="swiper-slide">
-                        <img
-                          src="assets/img/construction/project-6.webp"
-                          alt="Projeto Residencial HiperObras"
-                          class="img-fluid"
-                          loading="lazy"
-                        />
-                      </div>
+
+                    <div
+                      class="swiper-wrapper align-items-center"
+                      id="serviceGallery"
+                    >
+                      <!-- Slides gerados pelo JS -->
                     </div>
+
                     <div class="swiper-pagination"></div>
+
                     <div class="swiper-button-next"></div>
+
                     <div class="swiper-button-prev"></div>
                   </div>
                 </div>
 
+                <!-- DETALHES -->
                 <div
                   class="details-content"
                   data-aos="fade-up"
                   data-aos-delay="200"
                 >
                   <div class="section-header">
-                    <h3>Construindo a Sua Casa dos Sonhos</h3>
+                    <h3 id="serviceDetailsTitle">Carregando...</h3>
+
                     <div class="divider"></div>
                   </div>
-                  <p>
-                    O nosso serviço de construção residencial abrange todos os
-                    aspetos da construção de uma casa, desde o conceito inicial
-                    e design arquitetónico até à entrega final. Trabalhamos em
-                    estreita colaboração com proprietários e promotores
-                    imobiliários para criar espaços habitacionais que são
-                    bonitos e construídos para durar.
-                  </p>
-                  <p>
-                    Com mais de 18 anos de experiência em construção residencial
-                    em Angola, a nossa equipa entende a importância de materiais
-                    de qualidade, mão de obra qualificada e atenção aos
-                    detalhes. Cada casa que construímos cumpre ou excede os
-                    padrões de construção angolanos e as normas internacionais
-                    de integridade estrutural e eficiência energética.
-                  </p>
+
+                  <div id="serviceDetailsParagraphs">
+                    <!-- Gerado pelo JS -->
+                  </div>
                 </div>
 
+                <!-- O QUE OFERECEMOS -->
                 <div
                   class="service-features"
                   data-aos="fade-up"
@@ -296,62 +280,16 @@
                 >
                   <div class="section-header">
                     <h3>O Que Oferecemos</h3>
+
                     <div class="divider"></div>
                   </div>
-                  <div class="row g-4">
-                    <div class="col-md-6">
-                      <div class="feature-card">
-                        <div class="icon-wrapper">
-                          <i class="bi bi-pencil-square"></i>
-                        </div>
-                        <h4>Design Personalizado</h4>
-                        <p>
-                          Planos arquitetónicos personalizados que refletem o
-                          seu estilo de vida, preferências e orçamento.
-                        </p>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="feature-card">
-                        <div class="icon-wrapper">
-                          <i class="bi bi-shield-check"></i>
-                        </div>
-                        <h4>Engenharia Estrutural</h4>
-                        <p>
-                          Soluções estruturais robustas projetadas para
-                          segurança, durabilidade e conformidade com todas as
-                          normas.
-                        </p>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="feature-card">
-                        <div class="icon-wrapper">
-                          <i class="bi bi-lightning-charge"></i>
-                        </div>
-                        <h4>Eficiência Energética</h4>
-                        <p>
-                          Isolamento inteligente, coberturas preparadas para
-                          energia solar e janelas de alto desempenho para
-                          reduzir custos.
-                        </p>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="feature-card">
-                        <div class="icon-wrapper">
-                          <i class="bi bi-palette"></i>
-                        </div>
-                        <h4>Acabamentos Interiores</h4>
-                        <p>
-                          Trabalhos interiores premium incluindo pavimentos,
-                          armários, acessórios e carpintaria personalizada.
-                        </p>
-                      </div>
-                    </div>
+
+                  <div class="row g-4" id="serviceFeatures">
+                    <!-- Gerado pelo JS -->
                   </div>
                 </div>
 
+                <!-- PROCESSO -->
                 <div
                   class="implementation-steps"
                   data-aos="fade-up"
@@ -359,52 +297,12 @@
                 >
                   <div class="section-header">
                     <h3>O Nosso Processo</h3>
+
                     <div class="divider"></div>
                   </div>
-                  <div class="step-container">
-                    <div class="step">
-                      <span class="step-number">01</span>
-                      <div class="step-content">
-                        <h4>Consulta e Planeamento</h4>
-                        <p>
-                          Reunimo-nos consigo para entender a sua visão, avaliar
-                          o terreno e estabelecer o âmbito do projeto e
-                          orçamento.
-                        </p>
-                      </div>
-                    </div>
-                    <div class="step">
-                      <span class="step-number">02</span>
-                      <div class="step-content">
-                        <h4>Design e Licenças</h4>
-                        <p>
-                          Os nossos arquitetos criam planos detalhados e
-                          tratamos de todos os pedidos de licenciamento e
-                          aprovações regulamentares.
-                        </p>
-                      </div>
-                    </div>
-                    <div class="step">
-                      <span class="step-number">03</span>
-                      <div class="step-content">
-                        <h4>Construção</h4>
-                        <p>
-                          Da fundação aos acabamentos, as nossas equipas
-                          qualificadas constroem a sua casa com precisão e
-                          qualidade.
-                        </p>
-                      </div>
-                    </div>
-                    <div class="step">
-                      <span class="step-number">04</span>
-                      <div class="step-content">
-                        <h4>Inspeção e Entrega</h4>
-                        <p>
-                          Inspeção de qualidade rigorosa, visita final consigo e
-                          entrega completa com documentação de garantia.
-                        </p>
-                      </div>
-                    </div>
+
+                  <div class="step-container" id="serviceProcess">
+                    <!-- Gerado pelo JS -->
                   </div>
                 </div>
               </div>
@@ -498,6 +396,7 @@
 
     <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/service-details.js"></script>
 
     <script
       type="module"
