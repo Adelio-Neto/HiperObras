@@ -778,7 +778,6 @@ section,
 --------------------------------------------------------------*/
 .hero {
   position: relative;
-  padding: 580px 0 0;
   overflow: hidden;
 }
 
@@ -924,10 +923,6 @@ section,
 }
 
 @media (max-width: 991px) {
-  .hero {
-    padding: 100px 0 0;
-  }
-
   .hero h1 {
     font-size: 40px;
   }
@@ -938,10 +933,6 @@ section,
 }
 
 @media (max-width: 575px) {
-  .hero {
-    padding: 204px 0 0;
-  }
-
   .hero h1 {
     font-size: 32px;
   }
@@ -8616,49 +8607,55 @@ section,
 /* ===== RESET & BASE ===== */
 
 /* ===== NAVBAR ===== */
+/* Menu em camada própria: ocupa o topo ANTES da hero (sem sobreposição) */
 .navbar {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
   padding: 1.5rem 0;
-  background: transparent;
-  border-bottom: 1px solid transparent;
+  background: var(--background-color);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
 }
 
-/* Quando NÃO rolou → fundo TRANSPARENTE, letras BRANCAS */
+/* Sobre fundo claro → letras escuras */
 .navbar a {
-  color: #ffffff;
+  color: var(--nav-color);
   text-decoration: none;
 }
 
 .navbar .logo {
-  color: #ffffff;
+  color: var(--nav-color);
 }
 
 .navbar .logo-text em {
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--default-color);
+  opacity: 0.6;
 }
 
 .navbar .nav-link .nav-num {
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--default-color);
+  opacity: 0.5;
 }
 
 .navbar .btn-primary {
-  background: #ffffff;
-  color: #000000;
-  border-color: #ffffff;
+  background: var(--accent-color);
+  color: #ffffff;
+  border-color: var(--nav-color);
 }
 
 .navbar .menu-toggle {
-  border-color: rgba(255, 255, 255, 0.3);
+  border-color: rgba(0, 0, 0, 0.15);
 }
 
 .navbar .menu-toggle::before,
 .navbar .menu-toggle::after {
-  background: #ffffff;
+  background: var(--accent-color);
 }
 
 .navbar.scrolled {
