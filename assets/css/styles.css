@@ -8850,6 +8850,7 @@ section,
   border: 1px solid;
   position: relative;
   overflow: hidden;
+  border-radius: 4px;
 }
 
 .btn-primary::before {
@@ -9110,5 +9111,143 @@ body.menu-open::before {
 @media (max-width: 480px) {
   .sidebar-link {
     font-size: 1.1rem;
+  }
+}
+
+.map-section {
+  padding: 20px 0;
+  margin-top: -30px;
+}
+
+.map-container {
+  width: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 400px;
+  display: block;
+}
+
+/* Responsivo para mobile */
+@media (max-width: 768px) {
+  .map-container iframe {
+    height: 300px;
+  }
+}
+
+@media (max-width: 576px) {
+  .map-container iframe {
+    height: 250px;
+  }
+}
+
+/* CTA about */
+
+.cta-section {
+  padding: 80px 20px;
+
+  position: relative;
+}
+
+.cta-content {
+  padding: 40px;
+}
+
+.cta-content h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1e1e1e;
+  margin-bottom: 20px;
+}
+
+.cta-content p {
+  font-size: 1.15rem;
+  color: #6c757d;
+  max-width: 700px;
+  margin: 0 auto 10px;
+}
+
+.cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.cta-buttons .btn {
+  padding: 12px 32px;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.cta-buttons .btn-primary {
+  background: var(--accent-color);
+}
+
+.cta-buttons .btn-primary:hover {
+  background: var(--accent-color);
+  transform: translateY(-3px);
+}
+
+.cta-buttons .btn-outline-primary {
+  border-color: var(--accent-color);
+  color: #ffffff;
+}
+
+.cta-buttons .btn-outline-primary:hover {
+  background: var(--accent-color);
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(13, 110, 253, 0.25);
+}
+
+.cta-buttons .btn i {
+  margin-right: 8px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .cta-section {
+    padding: 50px 0;
+  }
+
+  .cta-content {
+    padding: 20px;
+  }
+
+  .cta-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .cta-content p {
+    font-size: 1rem;
+  }
+
+  .cta-buttons .btn {
+    padding: 10px 24px;
+    font-size: 0.95rem;
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 576px) {
+  .cta-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cta-buttons .btn {
+    width: 100%;
+    max-width: 100%;
   }
 }
