@@ -1108,7 +1108,7 @@ section,
 .about .mvv-card {
   display: flex;
   flex-direction: column;
-  padding: 44px 36px;
+  padding: 34px 26px;
   border-radius: 12px;
   background: var(--surface-color);
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 88%);
@@ -1122,8 +1122,8 @@ section,
 }
 
 .about .mvv-card .mvv-icon {
-  width: 68px;
-  height: 68px;
+  width: 48px;
+  height: 48px;
   border-radius: 14px;
   background: color-mix(in srgb, var(--accent-color), transparent 90%);
   display: flex;
