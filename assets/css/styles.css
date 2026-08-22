@@ -5691,21 +5691,15 @@ section,
   border-radius: 15px;
 }
 
-@media (max-width: 1200px) {
-  .featured-posts .blog-post-item {
-    height: 450px;
-  }
-}
-
 @media (max-width: 991px) {
   .featured-posts .blog-post-item {
-    height: 400px;
+    height: 260px;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 575px) {
   .featured-posts .blog-post-item {
-    height: 450px;
+    height: 240px;
   }
 }
 
@@ -5753,7 +5747,7 @@ section,
 
 @media (max-width: 768px) {
   .featured-posts .blog-post-content {
-    padding: 30px;
+    padding: 18px;
   }
 }
 
@@ -5798,7 +5792,7 @@ section,
 
 @media (max-width: 768px) {
   .featured-posts .blog-post-content h2 {
-    font-size: 22px;
+    font-size: 17px;
   }
 }
 

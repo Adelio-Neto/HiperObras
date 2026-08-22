@@ -69,8 +69,8 @@ new Swiper(".team-slider", {
     disableOnInteraction: false,
   },
 
-  slidesPerView: 1,
-  spaceBetween: 24,
+  slidesPerView: 2,
+  spaceBetween: 16,
 
   pagination: {
     el: ".team-slider .swiper-pagination",
