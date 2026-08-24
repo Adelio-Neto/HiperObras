@@ -7542,7 +7542,7 @@ section,
 .call-to-action-2 .cta-buttons .btn.btn-primary {
   background-color: var(--accent-color);
   border-color: var(--accent-color);
-  color: var(--contrast-color);
+  color: #fff;
 }
 
 .call-to-action-2 .cta-buttons .btn.btn-primary:hover {
@@ -9177,21 +9177,37 @@ body.menu-open::before {
   gap: 15px;
   justify-content: center;
 }
-
 .cta-buttons .btn {
   padding: 12px 32px;
   border-radius: 4px;
   font-weight: 600;
   transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid transparent;
 }
 
-.cta-buttons .btn-primary {
+/* Botão Contacte-nos */
+.cta-buttons .btn {
   background: var(--accent-color);
+  color: #fff;
+  border-color: var(--accent-color);
 }
 
-.cta-buttons .btn-primary:hover {
-  background: var(--accent-color);
-  transform: translateY(-3px);
+/* Hover */
+.cta-buttons .btn:hover {
+  color: #fff;
+  border-color: var(--accent-color);
+
+  box-shadow: 0 8px 25px rgba(13, 110, 253, 0.25);
+}
+
+/* Clique */
+.cta-buttons .btn-primary:active {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(13, 110, 253, 0.18);
 }
 
 .cta-buttons .btn-outline-primary {
