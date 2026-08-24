@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://adelio-neto.github.io/HiperObras/sitemap.xml
