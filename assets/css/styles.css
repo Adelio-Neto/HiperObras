@@ -15,7 +15,7 @@
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #37423b; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #0f2a44; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #123b78; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --accent-color: #2d5bff; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
@@ -23,11 +23,11 @@
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
   --nav-color: #37423b; /* The default color of the main navmenu links */
-  --nav-hover-color: #123b78; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-hover-color: #2d5bff; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #37423b; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #123b78; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-dropdown-hover-color: #2d5bff; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -540,83 +540,7 @@ h6 {
     font-size: 13px;
   }
 }
-/*--------------------------------------------------------------
-# Preloader
---------------------------------------------------------------*/
-#preloader {
-  position: fixed;
-  inset: 0;
-  z-index: 999999;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  overflow: hidden;
-  background: var(--background-color);
-  transition:
-    opacity 0.6s ease-out,
-    visibility 0.6s ease-out;
-}
-
-#preloader.preloader-hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
-
-.preloader-blocks {
-  display: flex;
-  align-items: flex-end;
-  gap: 8px;
-
-  height: 60px;
-}
-
-.preloader-blocks span {
-  display: block;
-  width: 10px;
-  height: 100%;
-
-  background: var(--accent-color);
-  border-radius: 2px;
-
-  transform-origin: bottom;
-  animation: preloader-rise 1.2s ease-in-out infinite;
-}
-
-.preloader-blocks span:nth-child(1) {
-  animation-delay: 0s;
-}
-
-.preloader-blocks span:nth-child(2) {
-  animation-delay: 0.15s;
-}
-
-.preloader-blocks span:nth-child(3) {
-  animation-delay: 0.3s;
-}
-
-.preloader-blocks span:nth-child(4) {
-  animation-delay: 0.45s;
-}
-
-.preloader-blocks span:nth-child(5) {
-  animation-delay: 0.6s;
-}
-
-@keyframes preloader-rise {
-  0%,
-  100% {
-    transform: scaleY(0.25);
-    opacity: 0.5;
-  }
-
-  50% {
-    transform: scaleY(1);
-    opacity: 1;
-  }
-}
 /*--------------------------------------------------------------
 # Scroll Top Button
 --------------------------------------------------------------*/
@@ -5206,6 +5130,10 @@ section,
   pointer-events: none;
 }
 
+/* =========================================================
+   PRELOADER
+   ========================================================= */
+
 #page-preloader {
   background: #fff;
   position: fixed;
@@ -5214,6 +5142,7 @@ section,
   right: 0;
   bottom: 0;
   z-index: 999999;
+
   transition:
     opacity 0.6s ease-out,
     visibility 0.6s ease-out;
@@ -5225,313 +5154,171 @@ section,
   pointer-events: none;
 }
 
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
 .preload-tetrominos {
   position: absolute;
+
   left: 50%;
   top: 60%;
+
   transform: translate(-109px, -94px);
+
   -o-transform: translate(-109px, -94px);
   -ms-transform: translate(-109px, -94px);
   -webkit-transform: translate(-109px, -94px);
   -moz-transform: translate(-109px, -94px);
 }
-:root {
-  --preloader-color-dark: var(--accent-color);
-  --preloader-color-light: var(--accent-color);
-}
+
+/* =========================================================
+   IMAGENS
+   ========================================================= */
 
 .preload-tetromino {
-  width: 45px;
-  height: 55px;
+  width: 40px;
+  height: 40px;
+
   position: absolute;
-  transition: all ease 0.35s;
-  -o-transition: all ease 0.35s;
-  -ms-transition: all ease 0.35s;
-  -webkit-transition: all ease 0.35s;
-  -moz-transition: all ease 0.35s;
 
-  background-color: var(--preloader-color-dark);
+  background-image: url("/assets/img/logo/HP_LLOGOTIPO_HP_FAVICONPRO.svg");
 
-  -webkit-mask: url('data:image/svg+xml;utf-8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 612 684"%3E%3Cpath d="M305.7 0L0 170.9v342.3L305.7 684 612 513.2V170.9L305.7 0z"/%3E%3C/svg%3E')
-    no-repeat top center;
-  mask: url('data:image/svg+xml;utf-8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 612 684"%3E%3Cpath d="M305.7 0L0 170.9v342.3L305.7 684 612 513.2V170.9L305.7 0z"/%3E%3C/svg%3E')
-    no-repeat top center;
-  -webkit-mask-size: contain;
-  mask-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  transition: all 0.35s ease;
+
+  -o-transition: all 0.35s ease;
+  -ms-transition: all 0.35s ease;
+  -webkit-transition: all 0.35s ease;
+  -moz-transition: all 0.35s ease;
 }
 
-.preload-tetromino::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-
-  background-color: var(--preloader-color-light);
-
-  -webkit-mask: url('data:image/svg+xml;utf-8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 612 684"%3E%3Cpath d="M305.7 80.1l-233.6 131 233.6 131 234.2-131-234.2-131"/%3E%3C/svg%3E')
-    no-repeat top center;
-  mask: url('data:image/svg+xml;utf-8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 612 684"%3E%3Cpath d="M305.7 80.1l-233.6 131 233.6 131 234.2-131-234.2-131"/%3E%3C/svg%3E')
-    no-repeat top center;
-  -webkit-mask-size: contain;
-  mask-size: contain;
-}
+/* =========================================================
+   IMAGEM 1
+   ========================================================= */
 
 .preload-box1 {
   animation: preload-tetromino1 1.73s ease-out infinite;
+
   -o-animation: preload-tetromino1 1.73s ease-out infinite;
   -ms-animation: preload-tetromino1 1.73s ease-out infinite;
   -webkit-animation: preload-tetromino1 1.73s ease-out infinite;
   -moz-animation: preload-tetromino1 1.73s ease-out infinite;
 }
+
+/* =========================================================
+   IMAGEM 2
+   ========================================================= */
+
 .preload-box2 {
   animation: preload-tetromino2 1.73s ease-out infinite;
+
   -o-animation: preload-tetromino2 1.73s ease-out infinite;
   -ms-animation: preload-tetromino2 1.73s ease-out infinite;
   -webkit-animation: preload-tetromino2 1.73s ease-out infinite;
   -moz-animation: preload-tetromino2 1.73s ease-out infinite;
 }
+
+/* =========================================================
+   IMAGEM 3
+   ========================================================= */
+
 .preload-box3 {
   animation: preload-tetromino3 1.73s ease-out infinite;
+
   -o-animation: preload-tetromino3 1.73s ease-out infinite;
   -ms-animation: preload-tetromino3 1.73s ease-out infinite;
   -webkit-animation: preload-tetromino3 1.73s ease-out infinite;
   -moz-animation: preload-tetromino3 1.73s ease-out infinite;
+
   z-index: 2;
 }
+
+/* =========================================================
+   IMAGEM 4
+   ========================================================= */
+
 .preload-box4 {
   animation: preload-tetromino4 1.73s ease-out infinite;
+
   -o-animation: preload-tetromino4 1.73s ease-out infinite;
   -ms-animation: preload-tetromino4 1.73s ease-out infinite;
   -webkit-animation: preload-tetromino4 1.73s ease-out infinite;
   -moz-animation: preload-tetromino4 1.73s ease-out infinite;
 }
+
+/* =========================================================
+   ANIMAÇÃO 1
+   ========================================================= */
+
 @keyframes preload-tetromino1 {
   0%,
   40% {
     transform: translate(0, 0);
   }
+
   50% {
     transform: translate(47px, -26px);
   }
+
   60%,
   100% {
     transform: translate(94px, 0);
   }
 }
-@-o-keyframes preload-tetromino1 {
-  0%,
-  40% {
-    -o-transform: translate(0, 0);
-  }
-  50% {
-    -o-transform: translate(47px, -26px);
-  }
-  60%,
-  100% {
-    -o-transform: translate(94px, 0);
-  }
-}
-@-ms-keyframes preload-tetromino1 {
-  0%,
-  40% {
-    -ms-transform: translate(0, 0);
-  }
-  50% {
-    -ms-transform: translate(47px, -26px);
-  }
-  60%,
-  100% {
-    -ms-transform: translate(94px, 0);
-  }
-}
-@-webkit-keyframes preload-tetromino1 {
-  0%,
-  40% {
-    -webkit-transform: translate(0, 0);
-  }
-  50% {
-    -webkit-transform: translate(47px, -26px);
-  }
-  60%,
-  100% {
-    -webkit-transform: translate(94px, 0);
-  }
-}
-@-moz-keyframes preload-tetromino1 {
-  0%,
-  40% {
-    -moz-transform: translate(0, 0);
-  }
-  50% {
-    -moz-transform: translate(47px, -26px);
-  }
-  60%,
-  100% {
-    -moz-transform: translate(94px, 0);
-  }
-}
+
+/* =========================================================
+   ANIMAÇÃO 2
+   ========================================================= */
+
 @keyframes preload-tetromino2 {
   0%,
   20% {
-    transform: translate(94px, 0px);
+    transform: translate(94px, 0);
   }
+
   40%,
   100% {
     transform: translate(140px, 26px);
   }
 }
-@-o-keyframes preload-tetromino2 {
-  0%,
-  20% {
-    -o-transform: translate(94px, 0px);
-  }
-  40%,
-  100% {
-    -o-transform: translate(140px, 26px);
-  }
-}
-@-ms-keyframes preload-tetromino2 {
-  0%,
-  20% {
-    -ms-transform: translate(94px, 0px);
-  }
-  40%,
-  100% {
-    -ms-transform: translate(140px, 26px);
-  }
-}
-@-webkit-keyframes preload-tetromino2 {
-  0%,
-  20% {
-    -webkit-transform: translate(94px, 0px);
-  }
-  40%,
-  100% {
-    -webkit-transform: translate(140px, 26px);
-  }
-}
-@-moz-keyframes preload-tetromino2 {
-  0%,
-  20% {
-    -moz-transform: translate(94px, 0px);
-  }
-  40%,
-  100% {
-    -moz-transform: translate(140px, 26px);
-  }
-}
+
+/* =========================================================
+   ANIMAÇÃO 3
+   ========================================================= */
+
 @keyframes preload-tetromino3 {
   0% {
     transform: translate(140px, 26px);
   }
+
   20%,
   60% {
     transform: translate(94px, 53px);
   }
+
   90%,
   100% {
     transform: translate(47px, 26px);
   }
 }
-@-o-keyframes preload-tetromino3 {
-  0% {
-    -o-transform: translate(140px, 26px);
-  }
-  20%,
-  60% {
-    -o-transform: translate(94px, 53px);
-  }
-  90%,
-  100% {
-    -o-transform: translate(47px, 26px);
-  }
-}
-@-ms-keyframes preload-tetromino3 {
-  0% {
-    -ms-transform: translate(140px, 26px);
-  }
-  20%,
-  60% {
-    -ms-transform: translate(94px, 53px);
-  }
-  90%,
-  100% {
-    -ms-transform: translate(47px, 26px);
-  }
-}
-@-webkit-keyframes preload-tetromino3 {
-  0% {
-    -webkit-transform: translate(140px, 26px);
-  }
-  20%,
-  60% {
-    -webkit-transform: translate(94px, 53px);
-  }
-  90%,
-  100% {
-    -webkit-transform: translate(47px, 26px);
-  }
-}
-@-moz-keyframes preload-tetromino3 {
-  0% {
-    -moz-transform: translate(140px, 26px);
-  }
-  20%,
-  60% {
-    -moz-transform: translate(94px, 53px);
-  }
-  90%,
-  100% {
-    -moz-transform: translate(47px, 26px);
-  }
-}
+
+/* =========================================================
+   ANIMAÇÃO 4
+   ========================================================= */
+
 @keyframes preload-tetromino4 {
   0%,
   60% {
     transform: translate(47px, 26px);
   }
+
   90%,
   100% {
     transform: translate(0, 0);
-  }
-}
-@-o-keyframes preload-tetromino4 {
-  0%,
-  60% {
-    -o-transform: translate(47px, 26px);
-  }
-  90%,
-  100% {
-    -o-transform: translate(0, 0);
-  }
-}
-@-ms-keyframes preload-tetromino4 {
-  0%,
-  60% {
-    -ms-transform: translate(47px, 26px);
-  }
-  90%,
-  100% {
-    -ms-transform: translate(0, 0);
-  }
-}
-@-webkit-keyframes preload-tetromino4 {
-  0%,
-  60% {
-    -webkit-transform: translate(47px, 26px);
-  }
-  90%,
-  100% {
-    -webkit-transform: translate(0, 0);
-  }
-}
-@-moz-keyframes preload-tetromino4 {
-  0%,
-  60% {
-    -moz-transform: translate(47px, 26px);
-  }
-  90%,
-  100% {
-    -moz-transform: translate(0, 0);
   }
 }
 
@@ -8779,8 +8566,12 @@ section,
 }
 
 .logo-text em {
-  font-style: italic;
   font-weight: 400;
+}
+
+.logo .logo-text img {
+  width: 100%;
+  height: 35px;
 }
 
 /* ===== NAV LINKS ===== */
