@@ -5182,8 +5182,7 @@ section,
 
   position: absolute;
 
-  background-image: url("/assets/img/logo/HP_LLOGOTIPO_HP_FAVICONPRO.svg");
-
+ background-image: url("../img/logo/HP_LLOGOTIPO_HP_FAVICONPRO.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
