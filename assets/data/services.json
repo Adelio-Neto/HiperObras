@@ -198,7 +198,7 @@
       "category": "REFORMAS",
       "shortDescription": "Renovação e recuperação de imóveis, ambientes e estruturas, preservando características importantes e modernizando os espaços.",
       "icon": "bi-tools",
-      "mainImage": "assets/img/construction/showcase-9.webp",
+      "mainImage": "assets/img/construction/showcase-2.webp",
 
       "overview": {
         "title": "Reformas e Restaurações",
@@ -293,7 +293,7 @@
       "category": "INFRAESTRUTURA",
       "shortDescription": "Soluções para infraestrutura urbana, arruamentos, pavimentação, drenagem e desenvolvimento de espaços exteriores.",
       "icon": "bi-cone-striped",
-      "mainImage": "assets/img/construction/showcase-10.webp",
+      "mainImage": "assets/img/construction/showcase-7.webp",
 
       "overview": {
         "title": "Infraestrutura e Urbanismo",
@@ -388,7 +388,7 @@
       "category": "GESTÃO DE OBRAS",
       "shortDescription": "Planeamento, coordenação e acompanhamento de obras para garantir maior controlo sobre custos, prazos e qualidade.",
       "icon": "bi-clipboard-check",
-      "mainImage": "assets/img/construction/showcase-11.webp",
+      "mainImage": "assets/img/construction/showcase-2.webp",
 
       "overview": {
         "title": "Gerenciamento de Obras",
@@ -483,7 +483,7 @@
       "category": "ARQUITETURA",
       "shortDescription": "Projetos arquitetónicos e soluções de design que unem estética, funcionalidade e identidade em cada espaço.",
       "icon": "bi-pencil-ruler",
-      "mainImage": "assets/img/construction/showcase-12.webp",
+      "mainImage": "assets/img/construction/showcase-7.webp",
 
       "overview": {
         "title": "Arquitetura e Design",

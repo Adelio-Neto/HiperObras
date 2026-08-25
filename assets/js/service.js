@@ -2,88 +2,70 @@ document.addEventListener("DOMContentLoaded", function () {
   const serviceTabs = document.querySelectorAll(".service-tab");
   const serviceSelect = document.getElementById("servicesSelect");
 
+  const serviceCategory = document.getElementById("serviceCategory");
   const serviceTitle = document.getElementById("serviceTitle");
   const serviceDescription = document.getElementById("serviceDescription");
   const serviceImage = document.getElementById("serviceImage");
-
-  const services = [
-    {
-      category: "CONSTRUÇÃO CIVIL",
-      title: "Construção Residencial",
-      description:
-        "Casas, apartamentos e condomínios com design moderno e materiais de primeira linha.",
-      image: "assets/img/construction/showcase-2.webp",
-    },
-
-    {
-      category: "CONSTRUÇÃO CIVIL",
-      title: "Obras Comerciais",
-      description:
-        "Edifícios corporativos, lojas, galpões e espaços comerciais funcionais.",
-      image: "assets/img/construction/showcase-8.webp",
-    },
-
-    {
-      category: "CONSTRUÇÃO CIVIL",
-      title: "Reformas e Restaurações",
-      description:
-        "Renovação completa de ambientes, com foco em eficiência, qualidade e estética.",
-      image: "assets/img/construction/showcase-7.webp",
-    },
-
-    {
-      category: "INFRAESTRUTURA",
-      title: "Infraestrutura e Urbanismo",
-      description:
-        "Pavimentação, redes de água e esgoto e projetos de mobilidade urbana.",
-      image: "assets/img/construction/showcase-4.webp",
-    },
-
-    {
-      category: "GESTÃO",
-      title: "Gerenciamento de Obras",
-      description:
-        "Gestão completa de cronogramas, equipes, materiais e orçamento.",
-      image: "assets/img/construction/showcase-2.webp",
-    },
-
-    {
-      category: "ARQUITETURA",
-      title: "Arquitetura e Design",
-      description:
-        "Projetos arquitetônicos inovadores, integrando estética, funcionalidade e sustentabilidade.",
-      image: "assets/img/construction/showcase-7.webp",
-    },
-  ];
 
   function changeService(index) {
     const service = services[index];
 
     if (!service) {
+      console.error("Serviço não encontrado:", index);
       return;
     }
 
-    /* Atualizar conteúdo */
+    console.log("Serviço selecionado:", index);
+    console.log("Imagem:", service.image);
 
+    /* =========================
+       ATUALIZAR CONTEÚDO
+    ========================= */
+
+    serviceCategory.textContent = service.category;
     serviceTitle.textContent = service.title;
-
     serviceDescription.textContent = service.description;
 
-    serviceImage.alt = service.title;
-
-    /* Pequeno efeito na imagem */
+    /* =========================
+       PREPARAR IMAGEM
+    ========================= */
 
     serviceImage.style.opacity = "0";
 
-    setTimeout(() => {
+    /*
+     * Criamos uma nova imagem antes de
+     * alterar a imagem que está na página.
+     *
+     * Isso evita deixar o espaço vazio
+     * caso a nova imagem demore a carregar.
+     */
+
+    const newImage = new Image();
+
+    newImage.onload = function () {
       serviceImage.src = service.image;
+      serviceImage.alt = service.title;
 
-      serviceImage.onload = () => {
-        serviceImage.style.opacity = "1";
-      };
-    }, 150);
+      serviceImage.style.opacity = "1";
 
-    /* Atualizar menu desktop */
+      console.log("Imagem carregada:", service.image);
+    };
+
+    newImage.onerror = function () {
+      console.error("ERRO AO CARREGAR A IMAGEM:", service.image);
+
+      /*
+       * Mesmo que a imagem dê erro,
+       * voltamos a mostrar o elemento.
+       */
+      serviceImage.style.opacity = "1";
+    };
+
+    newImage.src = service.image;
+
+    /* =========================
+       MENU DESKTOP
+    ========================= */
 
     serviceTabs.forEach((tab) => {
       tab.classList.remove("active");
@@ -97,14 +79,18 @@ document.addEventListener("DOMContentLoaded", function () {
       activeTab.classList.add("active");
     }
 
-    /* Atualizar dropdown mobile */
+    /* =========================
+       DROPDOWN MOBILE
+    ========================= */
 
     if (serviceSelect) {
       serviceSelect.value = index;
     }
   }
 
-  /* Clique nos serviços */
+  /* =========================
+     CLIQUE NOS SERVIÇOS
+  ========================= */
 
   serviceTabs.forEach((tab) => {
     tab.addEventListener("click", function () {
@@ -114,7 +100,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  /* Dropdown mobile */
+  /* =========================
+     DROPDOWN MOBILE
+  ========================= */
 
   if (serviceSelect) {
     serviceSelect.addEventListener("change", function () {
@@ -123,4 +111,10 @@ document.addEventListener("DOMContentLoaded", function () {
       changeService(index);
     });
   }
+
+  /* =========================
+     CARREGAR PRIMEIRO SERVIÇO
+  ========================= */
+
+  changeService(0);
 });
