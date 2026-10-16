@@ -124,15 +124,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
             <div class="card-actions">
 
-              <a
-                href="project-details.html?project=${encodeURIComponent(project.slug)}"
-                class="card-action"
-                title="Ver Detalhes"
-                aria-label="Ver detalhes de ${escapeAttribute(project.title)}"
-              >
-                <i class="bi bi-arrow-right"></i>
-              </a>
-
             </div>
 
           </div>
@@ -144,6 +135,22 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     swiper.appendChild(wrapper);
+
+    /* fica aqui no card-actions em cima 
+  
+  
+  
+              <a
+                href="project-details.html?project=${encodeURIComponent(project.slug)}"
+                class="card-action"
+                title="Ver Detalhes"
+                aria-label="Ver detalhes de ${escapeAttribute(project.title)}"
+              >
+                <i class="bi bi-arrow-right"></i>
+              </a>
+
+  
+  */
 
     /*
     | BOTÕES
