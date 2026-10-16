@@ -6,15 +6,57 @@ const sidebarLinks = document.querySelectorAll(".sidebar-link");
 const links = document.querySelectorAll(".nav-link");
 const SCROLL_THRESHOLD = 30;
 
-// ===== NAVBAR SCROLL =====
+// ===== UTILITY FUNCTIONS =====
+function throttle(func, limit) {
+  let inThrottle;
+  return function () {
+    const args = arguments;
+    const context = this;
+    if (!inThrottle) {
+      func.apply(context, args);
+      inThrottle = true;
+      setTimeout(() => (inThrottle = false), limit);
+    }
+  };
+}
+
+// ===== NAVBAR SCROLL COM ANIMAÇÃO =====
+let isNavbarVisible = false;
+let lastScrollY = window.scrollY;
+
 function handleScroll() {
-  if (window.scrollY > SCROLL_THRESHOLD) {
-    navbar.classList.add("scrolled");
+  const currentScrollY = window.scrollY;
+  const heroHeight =
+    document.getElementById("hero")?.offsetHeight || window.innerHeight;
+
+  // Verifica se passou do hero (com uma margem de 50px)
+  const passedHero = currentScrollY > heroHeight - 50;
+
+  // Mostra o navbar com animação quando passa do hero
+  if (passedHero) {
+    navbar.classList.add("scrolled", "visible");
+    navbar.classList.remove("hidden");
+    isNavbarVisible = true;
   } else {
     navbar.classList.remove("scrolled");
+    navbar.classList.add("hidden");
+    navbar.classList.remove("visible");
+    isNavbarVisible = false;
   }
+
+  // Efeito de sombra adicional baseado no scroll
+  if (currentScrollY > SCROLL_THRESHOLD) {
+    navbar.classList.add("shadow");
+  } else {
+    navbar.classList.remove("shadow");
+  }
+
+  lastScrollY = currentScrollY;
 }
-window.addEventListener("scroll", handleScroll, { passive: true });
+
+// Aplicar throttle para evitar chamadas excessivas
+const throttledHandleScroll = throttle(handleScroll, 50);
+window.addEventListener("scroll", throttledHandleScroll, { passive: true });
 
 // ===== SIDEBAR TOGGLE =====
 function openSidebar() {
@@ -22,7 +64,6 @@ function openSidebar() {
   sidebar.setAttribute("aria-hidden", "false");
   menuToggle.setAttribute("aria-expanded", "true");
   document.body.classList.add("menu-open");
-  // Previne scroll do body
   document.body.style.overflow = "hidden";
 }
 
@@ -60,7 +101,7 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
-// ===== SCROLL SPY =====
+// ===== SCROLL SPY OTIMIZADO =====
 const sections = document.querySelectorAll("section[id]");
 
 function setActiveLink() {
@@ -82,8 +123,13 @@ function setActiveLink() {
     }
   });
 }
-window.addEventListener("scroll", setActiveLink, { passive: true });
+
+// Aplicar throttle para limitar as chamadas (100ms)
+const throttledSetActiveLink = throttle(setActiveLink, 100);
+window.addEventListener("scroll", throttledSetActiveLink, { passive: true });
 
 // ===== INIT =====
+// Inicializa o navbar escondido
+navbar.classList.add("hidden");
 handleScroll();
 setActiveLink();

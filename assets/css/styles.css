@@ -15,7 +15,7 @@
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #37423b; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #0f2a44; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #2d5bff; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --accent-color: #01094c; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
@@ -23,11 +23,11 @@
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
   --nav-color: #37423b; /* The default color of the main navmenu links */
-  --nav-hover-color: #2d5bff; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-hover-color: #01094c; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #37423b; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #2d5bff; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-dropdown-hover-color: #01094c; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -701,6 +701,7 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 20%);
   margin-bottom: 24px;
 }
+
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
@@ -4685,6 +4686,17 @@ section,
   position: relative;
   overflow: hidden;
   min-height: 90vh;
+} /* =========================================================
+   HERO SECTION
+========================================================= */
+
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh; /* Altura mínima da viewport */
+  height: 100vh; /* Altura fixa da viewport */
+  overflow: hidden;
+  background: #0a1a2b;
 }
 
 /* =========================================================
@@ -4693,7 +4705,10 @@ section,
 
 .hero-slide {
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Altura total do hero */
   display: flex;
   align-items: center;
 
@@ -4725,11 +4740,14 @@ section,
 
 .hero-bg {
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 
   overflow: hidden;
 
-  z-index: -1;
+  z-index: 0;
 }
 
 .hero-bg img {
@@ -4755,7 +4773,10 @@ section,
   content: "";
 
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 
   background: linear-gradient(
     90deg,
@@ -4763,6 +4784,8 @@ section,
     rgba(0, 0, 0, 0.42),
     rgba(0, 0, 0, 0.58)
   );
+
+  z-index: 1;
 }
 
 /* =========================================================
@@ -4772,6 +4795,15 @@ section,
 .hero-slide .container {
   position: relative;
   z-index: 3;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-slide .row {
+  width: 100%;
 }
 
 .hero-slide h1 {
@@ -4782,6 +4814,12 @@ section,
   transition:
     opacity 0.8s ease 0.2s,
     transform 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.2s;
+
+  color: #ffffff;
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 24px;
 }
 
 .hero-slide p {
@@ -4792,6 +4830,10 @@ section,
   transition:
     opacity 0.8s ease 0.35s,
     transform 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.35s;
+
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 18px;
+  line-height: 1.6;
 }
 
 .hero-slide .hero-actions {
@@ -4802,6 +4844,8 @@ section,
   transition:
     opacity 0.8s ease 0.5s,
     transform 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.5s;
+
+  margin-top: 30px;
 }
 
 .hero-slide.active h1,
@@ -4813,7 +4857,7 @@ section,
 }
 
 /* =========================================================
-   BOTÃO ANTERIOR
+   BOTÕES DE NAVEGAÇÃO
 ========================================================= */
 
 .hero-prev,
@@ -4847,6 +4891,9 @@ section,
     background 0.3s ease,
     transform 0.3s ease,
     border-color 0.3s ease;
+
+  font-size: 24px;
+  padding: 0;
 }
 
 .hero-prev {
@@ -4873,7 +4920,7 @@ section,
 }
 
 /* =========================================================
-   DOTS
+   DOTS (INDICADORES)
 ========================================================= */
 
 .hero-dots {
@@ -4925,7 +4972,7 @@ section,
 }
 
 /* =========================================================
-   LOADER
+   LOADER (BARRA DE PROGRESSO)
 ========================================================= */
 
 .hero-loader {
@@ -4937,7 +4984,7 @@ section,
   width: 100%;
   height: 4px;
 
-  background: #fff;
+  background: rgba(255, 255, 255, 0.2);
 
   z-index: 20;
 
@@ -4948,7 +4995,7 @@ section,
   width: 0;
   height: 100%;
 
-  background: var(--accent-color);
+  background: var(--accent-color, #f39c12);
 
   transform-origin: left;
 
@@ -4972,12 +5019,59 @@ section,
 }
 
 /* =========================================================
+   BOTÕES DE AÇÃO
+========================================================= */
+
+.hero-actions .btn-main {
+  background: var(--accent-color, #f39c12);
+  color: #ffffff;
+  padding: 12px 30px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hero-actions .btn-main:hover {
+  background: color-mix(in srgb, var(--accent-color, #f39c12), black 10%);
+}
+
+.hero-actions .btn-outline {
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  padding: 10px 28px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  text-decoration: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.hero-actions .btn-outline:hover {
+  background: #ffffff;
+  color: #0a1a2b;
+}
+
+/* =========================================================
    RESPONSIVO
 ========================================================= */
 
 @media (max-width: 991px) {
   .hero {
     min-height: 80vh;
+    height: 80vh;
   }
 
   .hero-prev {
@@ -4987,17 +5081,23 @@ section,
   .hero-next {
     right: 20px;
   }
+
+  .hero-slide h1 {
+    font-size: 40px;
+  }
 }
 
 @media (max-width: 767px) {
   .hero {
     min-height: 75vh;
+    height: 75vh;
   }
 
   .hero-prev,
   .hero-next {
     width: 42px;
     height: 42px;
+    font-size: 18px;
   }
 
   .hero-prev {
@@ -5013,23 +5113,37 @@ section,
   }
 
   .hero-slide h1 {
-    font-size: 2.2rem;
+    font-size: 32px;
   }
 
   .hero-slide p {
-    font-size: 1rem;
+    font-size: 16px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .hero-actions .btn-main,
+  .hero-actions .btn-outline {
+    width: 100%;
+    justify-content: center;
   }
 }
 
 @media (max-width: 480px) {
   .hero {
-    min-height: 72vh;
+    min-height: 70vh;
+    height: 70vh;
   }
 
   .hero-prev,
   .hero-next {
     width: 38px;
     height: 38px;
+    font-size: 16px;
   }
 
   .hero-prev {
@@ -5041,7 +5155,7 @@ section,
   }
 
   .hero-slide h1 {
-    font-size: 1.9rem;
+    font-size: 28px;
   }
 }
 .project-filters {
@@ -5139,7 +5253,7 @@ section,
    ========================================================= */
 
 #page-preloader {
-  background: #fff;
+  background: var(--accent-color);
   position: fixed;
   left: 0;
   top: 0;
@@ -5150,6 +5264,16 @@ section,
   transition:
     opacity 0.6s ease-out,
     visibility 0.6s ease-out;
+}
+
+.preloader-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
 }
 
 #page-preloader.preloader-hidden {
@@ -5184,7 +5308,7 @@ section,
   width: 45px;
   height: 45px;
   position: absolute;
-  background-image: url("../img/logo/HP_LLOGOTIPO_HP_FAVICONPRO.svg");
+  background-image: url("../img/logo/HIBEROBRASLOGOTIPO_HP_FAVICONPRO.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -8454,7 +8578,10 @@ section,
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-  transition: all 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
 }
 
 /* Sobre fundo claro → letras escuras */
